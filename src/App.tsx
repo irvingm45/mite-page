@@ -12,12 +12,12 @@ export default function App() {
       <div className="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#ffdbd1] rounded-full mix-blend-multiply filter blur-[100px] opacity-60 animate-blob pointer-events-none z-[-1]"></div>
       <div className="fixed top-[20%] right-[-10%] w-[400px] h-[400px] bg-[#d1e4fb] rounded-full mix-blend-multiply filter blur-[100px] opacity-60 animate-blob animation-delay-2000 pointer-events-none z-[-1]"></div>
       <div className="fixed bottom-[-10%] left-[20%] w-[600px] h-[600px] bg-[#f5e3d6] rounded-full mix-blend-multiply filter blur-[120px] opacity-60 animate-blob animation-delay-4000 pointer-events-none z-[-1]"></div>
-      
+
       {/* TopNavBar Wrapper (Fixed/Sticky) */}
-      <div className="fixed top-0 left-0 w-full z-50 flex justify-center p-4 pointer-events-none">
-        <nav className="w-full max-w-7xl flex justify-between items-center px-margin-desktop py-4 bg-white/10 backdrop-blur-md border border-white/20 shadow-lg rounded-[2rem] pointer-events-auto">
+      <div className="fixed top-0 left-0 w-full z-50 flex justify-center p-2 md:p-4 pointer-events-none">
+        <nav className="w-full max-w-7xl flex justify-between items-center px-4 md:px-8 py-2 md:py-4 bg-white/10 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl md:rounded-[2rem] pointer-events-auto">
           <div className="font-headline-sm text-headline-sm font-bold text-white">
-            MITE Industrial
+            MITE
           </div>
           <div className="hidden md:flex items-center space-x-md">
             <a className="text-white/80 hover:text-white transition-colors font-semibold" href="#hvac">HVAC</a>
@@ -26,22 +26,22 @@ export default function App() {
             <a className="text-white/80 hover:text-white transition-colors font-semibold" href="#infrastructure">Infrastructure</a>
             <a className="text-white/80 hover:text-white transition-colors font-semibold" href="#why-choose-us">Benefits</a>
           </div>
-          <button className="bg-gradient-to-r from-[#b2533e] to-[#934a34] hover:from-[#c85a3e] hover:to-[#a3533e] text-white shadow-[0_4px_15px_rgba(147,74,52,0.4)] border border-white/20 hover:scale-105 transition-all px-6 py-2 rounded-full font-label-md text-label-md font-bold">
+          <button className="bg-gradient-to-r from-[#b2533e] to-[#934a34] hover:from-[#c85a3e] hover:to-[#a3533e] text-white shadow-[0_4px_15px_rgba(147,74,52,0.4)] border border-white/20 hover:scale-105 transition-all px-4 py-1.5 md:px-6 md:py-2 rounded-full text-label-sm md:text-label-md font-bold">
             Get a Quote
           </button>
         </nav>
       </div>
-      
+
       <main className="flex-grow">
         {/* Hero Section with Typewriter animation */}
         {/* Full-bleed Hero Section with Background Image */}
         <section className="relative w-full min-h-[90vh] flex items-center justify-center text-center overflow-hidden px-margin-mobile md:px-margin-desktop pt-36 pb-20 z-10">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 z-0">
-            <img 
-              className="w-full h-full object-cover filter brightness-[0.3] contrast-[1.05]" 
-              alt="Modern commercial office space with soft daylight" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMw997aBY6wMq_AkAp6iK-tlJzAyKIRIK9Uq2tniaT-7mRVs-12aET-bAT1EDY3sMeHVFWLcAEtsY--SgnQooUFA1p0Q5kOApwZcWC5D23iIeFU24DcSuTDotQXOGehg9C_hvNJgGJeZfN456FCUuSj02ZSSQbBo-vNxyalMdE1a2b9zQW3OAhbR6yHqooTQ08hihybbuw0upXiUACTQ5xerVAYCjxlPneE3AYVEyBJRtOCQgarhaBbovrl1nwri-fJnpFfDI-STk" 
+            <img
+              className="w-full h-full object-cover filter brightness-[0.3] contrast-[1.05]"
+              alt="Modern commercial office space with soft daylight"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMw997aBY6wMq_AkAp6iK-tlJzAyKIRIK9Uq2tniaT-7mRVs-12aET-bAT1EDY3sMeHVFWLcAEtsY--SgnQooUFA1p0Q5kOApwZcWC5D23iIeFU24DcSuTDotQXOGehg9C_hvNJgGJeZfN456FCUuSj02ZSSQbBo-vNxyalMdE1a2b9zQW3OAhbR6yHqooTQ08hihybbuw0upXiUACTQ5xerVAYCjxlPneE3AYVEyBJRtOCQgarhaBbovrl1nwri-fJnpFfDI-STk"
             />
             {/* Soft gradient bottom overlay to blend with the rest of the page */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#faf9f7] via-transparent to-black/30"></div>
@@ -53,25 +53,25 @@ export default function App() {
               <span className="material-symbols-outlined text-[16px] icon-fill text-[#fea186]">verified</span>
               <span className="font-label-sm text-label-sm uppercase tracking-wider font-bold">Mantenimiento Industrial</span>
             </div>
-            
+
             {/* Giant Title "MITE" */}
             <h1 className="font-display font-extrabold text-[5rem] sm:text-[7rem] md:text-[9rem] text-white leading-none tracking-tighter [text-shadow:_0_4px_24px_rgba(0,0,0,0.6)] select-none">
               MITE
             </h1>
-            
+
             {/* Line 2: "Cuidamos el entorno donde tu negocio" */}
             <h2 className="font-headline font-semibold text-2xl sm:text-3xl md:text-5xl text-white/95 max-w-3xl [text-shadow:_0_2px_12px_rgba(0,0,0,0.6)] select-none leading-tight mt-2">
               Cuidamos el entorno donde tu negocio
             </h2>
-            
+
             {/* Line 3: Typewriter Animation in Terracotta */}
-            <div className="font-headline font-bold text-4xl sm:text-5xl md:text-7xl text-[#ffb5a0] min-h-[60px] md:min-h-[100px] [text-shadow:_0_2px_12px_rgba(0,0,0,0.4)] select-none mt-2">
+            <div className="font-headline font-bold text-4xl sm:text-5xl md:text-7xl text-[#ffb5a0] min-h-[48px] md:min-h-[100px] [text-shadow:_0_2px_12px_rgba(0,0,0,0.4)] select-none mt-0 md:mt-2">
               <Typewriter
                 text={[
-                  "crece.",
-                  "prospera.",
-                  "opera seguro.",
-                  "se mantiene al 100%."
+                  "crece",
+                  "prospera",
+                  "opera seguro",
+                  "se mantiene al 100%"
                 ]}
                 speed={75}
                 waitTime={2200}
@@ -93,7 +93,7 @@ export default function App() {
             </div>
           </div>
         </section>
-        
+
         {/* Trust Bar */}
         <section className="bg-white/20 backdrop-blur-md border-y border-white/40 py-md shadow-[0_8px_32px_rgba(0,0,0,0.02)] overflow-hidden">
           <div className="w-full">
@@ -114,7 +114,7 @@ export default function App() {
             </div>
           </div>
         </section>
-        
+
         {/* Service Pillars */}
         <section id="services" className="py-xl px-margin-mobile md:px-margin-desktop bg-transparent max-w-7xl mx-auto">
           <div className="text-center mb-xl">
@@ -151,7 +151,7 @@ export default function App() {
             </div>
           </div>
         </section>
-        
+
         {/* Bento Grid / Why Choose Us */}
         <section id="why-choose-us" className="py-xl px-margin-mobile md:px-margin-desktop bg-transparent relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -193,7 +193,7 @@ export default function App() {
             </div>
           </div>
         </section>
-        
+
         {/* Contact Section */}
         <section id="contact" className="py-xl px-margin-mobile md:px-margin-desktop bg-transparent max-w-3xl mx-auto relative z-10">
           <div className="bg-white/50 backdrop-blur-2xl rounded-[2.5rem] shadow-[0_15px_40px_rgba(0,0,0,0.05),inset_0_0_30px_rgba(255,255,255,0.8)] border border-white/70 p-lg md:p-xl relative overflow-hidden">
@@ -228,7 +228,7 @@ export default function App() {
           </div>
         </section>
       </main>
-      
+
       {/* Footer */}
       <footer className="bg-tertiary text-on-tertiary font-body-sm text-body-sm w-full px-margin-desktop py-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-md relative z-10 rounded-t-[2rem] mt-auto">
         <div className="font-headline-sm text-headline-sm font-bold text-on-tertiary">
