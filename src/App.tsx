@@ -43,7 +43,7 @@ export default function App() {
             <img
               className="w-full h-full object-cover filter brightness-[0.3] contrast-[1.05]"
               alt="Modern commercial office space with soft daylight"
-              src="./public/hero_background.webp"
+              src="hero_background.webp"
             />
             {/* Soft gradient bottom overlay to blend with the rest of the page */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#faf9f7] via-transparent to-black/30"></div>
@@ -218,7 +218,7 @@ export default function App() {
             <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-sm h-auto md:h-[500px]">
               {/* Large Card (Terracotta Overlay) */}
               <div className="md:col-span-2 md:row-span-2 bg-white/40 backdrop-blur-2xl rounded-[2rem] shadow-[0_8px_32px_rgba(0,0,0,0.05),inset_0_0_20px_rgba(255,255,255,0.5)] border border-white/60 p-lg flex flex-col justify-end relative overflow-hidden group">
-                <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Technician inspecting an electrical panel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF-D5xmWRHkE-EC3lPXIbYo-POA6lbtLwvUFokwtZYGj6VGwSTBXgqVq5Z1zRqGUJpjNCrNoHuUWQ2YMQmEuFRsx6Ike_2PUSMa45O16HZ67PC3K-BCfTk4jd31XJ02QfCKWdtho_yJlfdjmrR5ejNx1E8sWt6Ygq2bnvh05yqM5wWjJ5gi37xLlVfzV1WK_DzFEjwmM3TCO5zFWRzamtaNlEFTaZ6DDcf152Ja6UvSo3gQrHTqe0q23bTIM4nULomzlcyNWJKnfo" />
+                <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Technician inspecting an electrical panel" src="tecnico.webp" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#783521]/90 via-[#783521]/30 to-transparent backdrop-blur-[2px]"></div>
                 <div className="absolute inset-0 ring-1 ring-inset ring-white/20 rounded-[2rem]"></div>
                 <div className="relative z-10 text-white">
