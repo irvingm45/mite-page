@@ -6,6 +6,8 @@ export default function App() {
     alert("¡Mensaje enviado con éxito! Nos contactaremos a la brevedad.")
   }
 
+  const glassCardClass = "w-full sm:w-[85%] md:w-[70%] lg:w-[65%] h-full bg-white/45 backdrop-blur-md border border-white/40 shadow-lg rounded-2xl md:rounded-[1.5rem] p-5 md:p-6 flex flex-col justify-center relative z-10"
+
   return (
     <>
       {/* Global Liquid Blobs (Distributed Palette Colors) */}
@@ -41,7 +43,7 @@ export default function App() {
             <img
               className="w-full h-full object-cover filter brightness-[0.3] contrast-[1.05]"
               alt="Modern commercial office space with soft daylight"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMw997aBY6wMq_AkAp6iK-tlJzAyKIRIK9Uq2tniaT-7mRVs-12aET-bAT1EDY3sMeHVFWLcAEtsY--SgnQooUFA1p0Q5kOApwZcWC5D23iIeFU24DcSuTDotQXOGehg9C_hvNJgGJeZfN456FCUuSj02ZSSQbBo-vNxyalMdE1a2b9zQW3OAhbR6yHqooTQ08hihybbuw0upXiUACTQ5xerVAYCjxlPneE3AYVEyBJRtOCQgarhaBbovrl1nwri-fJnpFfDI-STk"
+              src="./public/hero_background.webp"
             />
             {/* Soft gradient bottom overlay to blend with the rest of the page */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#faf9f7] via-transparent to-black/30"></div>
@@ -51,7 +53,7 @@ export default function App() {
           <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center justify-center gap-4">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-[#ffdbd1] px-4 py-1.5 rounded-full w-max shadow-sm mb-4">
               <span className="material-symbols-outlined text-[16px] icon-fill text-[#fea186]">verified</span>
-              <span className="font-label-sm text-label-sm uppercase tracking-wider font-bold">Mantenimiento Industrial</span>
+              <span className="font-label-sm text-label-sm uppercase tracking-wider font-bold">Ambiente Eficiente</span>
             </div>
 
             {/* Giant Title "MITE" */}
@@ -121,33 +123,90 @@ export default function App() {
             <h2 className="font-headline-md text-headline-md text-primary mb-sm">Pilares de Servicio MITE</h2>
             <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Mantenimiento preventivo y correctivo diseñado para garantizar la operatividad de tus espacios comerciales.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-            {/* Pillar 1 */}
-            <div id="hvac" className="bg-white/50 backdrop-blur-2xl p-lg rounded-[2rem] shadow-[0_8px_32px_rgba(0,0,0,0.05),inset_0_0_20px_rgba(255,255,255,0.8)] border border-white/60 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(0,0,0,0.1),inset_0_0_30px_rgba(255,255,255,1)] transition-all duration-300 relative overflow-hidden group">
-              <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/60 to-transparent pointer-events-none transition-opacity group-hover:opacity-100"></div>
-              <div className="w-16 h-16 bg-gradient-to-br from-[#ffdbd1] to-[#ffb5a0] rounded-2xl flex items-center justify-center mb-md text-[#783521] shadow-[inset_0_2px_10px_rgba(255,255,255,0.9),0_4px_15px_rgba(255,181,160,0.5)] border border-white/50 relative z-10">
-                <span className="material-symbols-outlined text-[32px] icon-fill">mode_fan</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Pillar 1: HVAC */}
+            <div id="hvac" className="relative h-[280px] sm:h-[300px] md:h-[320px] rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300 group" style={{ transform: "translateZ(0)" }}>
+              <img
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                src="hvac.webp"
+                alt="HVAC y Refrigeración"
+              />
+              <div className="absolute inset-0 p-4 md:p-6 flex items-center justify-start bg-black/5">
+                <div className={glassCardClass}>
+                  <div>
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#ffdbd1] to-[#ffb5a0] rounded-xl flex items-center justify-center mb-3 md:mb-4 text-[#783521] border border-white/50 shadow-sm">
+                      <span className="material-symbols-outlined text-[24px] md:text-[28px] icon-fill">ac_unit</span>
+                    </div>
+                    <h3 className="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">HVAC y Refrigeración</h3>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                      Proyectos y mantenimiento correctivo/preventivo de sistemas de aire acondicionado y refrigeración comercial o industrial.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h3 className="font-headline-sm text-headline-sm text-on-surface mb-xs relative z-10">Clima Perfecto</h3>
-              <p className="font-body-md text-body-md text-on-surface-variant relative z-10">Sistemas HVAC y calidad de aire optimizados para asegurar el confort de estudiantes, huéspedes y colaboradores en todo momento.</p>
             </div>
-            {/* Pillar 2 */}
-            <div id="electrical" className="bg-white/50 backdrop-blur-2xl p-lg rounded-[2rem] shadow-[0_8px_32px_rgba(0,0,0,0.05),inset_0_0_20px_rgba(255,255,255,0.8)] border border-white/60 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(0,0,0,0.1),inset_0_0_30px_rgba(255,255,255,1)] transition-all duration-300 relative overflow-hidden group">
-              <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/60 to-transparent pointer-events-none transition-opacity group-hover:opacity-100"></div>
-              <div className="w-16 h-16 bg-gradient-to-br from-[#d1e4fb] to-[#a5b8ce] rounded-2xl flex items-center justify-center mb-md text-[#091d2e] shadow-[inset_0_2px_10px_rgba(255,255,255,0.9),0_4px_15px_rgba(165,184,206,0.5)] border border-white/50 relative z-10">
-                <span className="material-symbols-outlined text-[32px] icon-fill">bolt</span>
+            {/* Pillar 2: Electrical */}
+            <div id="electrical" className="relative h-[280px] sm:h-[300px] md:h-[320px] rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300 group" style={{ transform: "translateZ(0)" }}>
+              <img
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                src="electric_instalation.webp"
+                alt="Instalaciones Eléctricas"
+              />
+              <div className="absolute inset-0 p-4 md:p-6 flex items-center justify-start bg-black/5">
+                <div className={glassCardClass}>
+                  <div>
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#d1e4fb] to-[#a5b8ce] rounded-xl flex items-center justify-center mb-3 md:mb-4 text-[#091d2e] border border-white/50 shadow-sm">
+                      <span className="material-symbols-outlined text-[24px] md:text-[28px] icon-fill">bolt</span>
+                    </div>
+                    <h3 className="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Instalaciones Eléctricas</h3>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                      Ingeniería y mantenimiento preventivo y correctivo para redes de baja, media y alta tensión, asegurando un suministro continuo.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h3 className="font-headline-sm text-headline-sm text-on-surface mb-xs relative z-10">Energía Ininterrumpida</h3>
-              <p className="font-body-md text-body-md text-on-surface-variant relative z-10">Sistemas eléctricos y soluciones de respaldo (backups) robustos para que tu operación nunca se detenga, sin importar las circunstancias.</p>
             </div>
-            {/* Pillar 3 */}
-            <div id="infrastructure" className="bg-white/50 backdrop-blur-2xl p-lg rounded-[2rem] shadow-[0_8px_32px_rgba(0,0,0,0.05),inset_0_0_20px_rgba(255,255,255,0.8)] border border-white/60 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(0,0,0,0.1),inset_0_0_30px_rgba(255,255,255,1)] transition-all duration-300 relative overflow-hidden group">
-              <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/60 to-transparent pointer-events-none transition-opacity group-hover:opacity-100"></div>
-              <div className="w-16 h-16 bg-gradient-to-br from-[#e4e2dd] to-[#c8c6c2] rounded-2xl flex items-center justify-center mb-md text-[#31312e] shadow-[inset_0_2px_10px_rgba(255,255,255,0.9),0_4px_15px_rgba(200,198,194,0.5)] border border-white/50 relative z-10">
-                <span className="material-symbols-outlined text-[32px] icon-fill">shield</span>
+            {/* Pillar 3: Backups & Networks */}
+            <div id="backups" className="relative h-[280px] sm:h-[300px] md:h-[320px] rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300 group" style={{ transform: "translateZ(0)" }}>
+              <img
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                src="ups.webp"
+                alt="Sistemas UPS y Redes"
+              />
+              <div className="absolute inset-0 p-4 md:p-6 flex items-center justify-start bg-black/5">
+                <div className={glassCardClass}>
+                  <div>
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#ffeedd] to-[#fea186] rounded-xl flex items-center justify-center mb-3 md:mb-4 text-[#76331f] border border-white/50 shadow-sm">
+                      <span className="material-symbols-outlined text-[24px] md:text-[28px] icon-fill">battery_charging_full</span>
+                    </div>
+                    <h3 className="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Sistemas UPS y Redes</h3>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                      Mantenimiento de sistemas UPS para el respaldo de energía ininterrumpida y soluciones integrales en cableado estructurado de redes.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h3 className="font-headline-sm text-headline-sm text-on-surface mb-xs relative z-10">Espacios Seguros</h3>
-              <p className="font-body-md text-body-md text-on-surface-variant relative z-10">Mantenimiento general e infraestructura estructural para garantizar la seguridad total de las instalaciones y de quienes las ocupan.</p>
+            </div>
+            {/* Pillar 4: Infrastructure & Machinery */}
+            <div id="infrastructure" className="relative h-[280px] sm:h-[300px] md:h-[320px] rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300 group" style={{ transform: "translateZ(0)" }}>
+              <img
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                src="obra_civil.webp"
+                alt="Maquinaria y Obra Civil"
+              />
+              <div className="absolute inset-0 p-4 md:p-6 flex items-center justify-start bg-black/5">
+                <div className={glassCardClass}>
+                  <div>
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#e4e2dd] to-[#c8c6c2] rounded-xl flex items-center justify-center mb-3 md:mb-4 text-[#31312e] border border-white/50 shadow-sm">
+                      <span className="material-symbols-outlined text-[24px] md:text-[28px] icon-fill">construction</span>
+                    </div>
+                    <h3 className="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Maquinaria y Obra Civil</h3>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                      Mantenimiento preventivo/correctivo de maquinaria industrial y el desarrollo de todo tipo de obra civil e infraestructura física.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
