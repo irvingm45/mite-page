@@ -13,27 +13,29 @@ export default function App() {
       <div className="fixed top-[20%] right-[-10%] w-[400px] h-[400px] bg-[#fed7aa] rounded-full mix-blend-multiply filter blur-[100px] opacity-60 animate-blob animation-delay-2000 pointer-events-none z-[-1]"></div>
       <div className="fixed bottom-[-10%] left-[20%] w-[600px] h-[600px] bg-[#e0e7ff] rounded-full mix-blend-multiply filter blur-[120px] opacity-60 animate-blob animation-delay-4000 pointer-events-none z-[-1]"></div>
       
-      {/* TopNavBar */}
-      <nav className="bg-white/40 backdrop-blur-xl border-b border-white/60 shadow-[0_4px_30px_rgba(0,0,0,0.05)] font-body-md text-body-md top-0 sticky z-50 flex justify-between items-center w-full px-margin-desktop py-4 max-w-7xl mx-auto rounded-b-[2rem] mt-4">
-        <div className="font-headline-sm text-headline-sm font-bold text-primary">
-          MITE Industrial
-        </div>
-        <div className="hidden md:flex items-center space-x-md">
-          <a className="text-on-surface-variant hover:text-primary transition-colors font-semibold" href="#hvac">HVAC</a>
-          <a className="text-on-surface-variant hover:text-primary transition-colors font-semibold" href="#electrical">Electrical</a>
-          <a className="text-on-surface-variant hover:text-primary transition-colors font-semibold" href="#backups">Backups</a>
-          <a className="text-on-surface-variant hover:text-primary transition-colors font-semibold" href="#infrastructure">Infrastructure</a>
-          <a className="text-on-surface-variant hover:text-primary transition-colors font-semibold" href="#why-choose-us">Benefits</a>
-        </div>
-        <button className="bg-gradient-to-r from-[#004a7c] to-[#0075c4] text-white shadow-[0_4px_15px_rgba(0,74,124,0.4)] border border-white/30 hover:shadow-[0_6px_20px_rgba(0,74,124,0.6)] hover:scale-105 transition-all px-6 py-2 rounded-full font-label-md text-label-md">
-          Get a Quote
-        </button>
-      </nav>
+      {/* TopNavBar Wrapper (Fixed/Sticky) */}
+      <div className="fixed top-0 left-0 w-full z-50 flex justify-center p-4 pointer-events-none">
+        <nav className="w-full max-w-7xl flex justify-between items-center px-margin-desktop py-4 bg-white/10 backdrop-blur-md border border-white/20 shadow-lg rounded-[2rem] pointer-events-auto">
+          <div className="font-headline-sm text-headline-sm font-bold text-white">
+            MITE Industrial
+          </div>
+          <div className="hidden md:flex items-center space-x-md">
+            <a className="text-white/80 hover:text-white transition-colors font-semibold" href="#hvac">HVAC</a>
+            <a className="text-white/80 hover:text-white transition-colors font-semibold" href="#electrical">Electrical</a>
+            <a className="text-white/80 hover:text-white transition-colors font-semibold" href="#backups">Backups</a>
+            <a className="text-white/80 hover:text-white transition-colors font-semibold" href="#infrastructure">Infrastructure</a>
+            <a className="text-white/80 hover:text-white transition-colors font-semibold" href="#why-choose-us">Benefits</a>
+          </div>
+          <button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white shadow-[0_4px_15px_rgba(14,165,233,0.4)] border border-white/20 hover:scale-105 transition-all px-6 py-2 rounded-full font-label-md text-label-md font-bold">
+            Get a Quote
+          </button>
+        </nav>
+      </div>
       
       <main className="flex-grow">
         {/* Hero Section with Typewriter animation */}
         {/* Full-bleed Hero Section with Background Image */}
-        <section className="relative w-full min-h-[85vh] flex items-center justify-center text-center overflow-hidden px-margin-mobile md:px-margin-desktop py-20 z-10">
+        <section className="relative w-full min-h-[90vh] flex items-center justify-center text-center overflow-hidden px-margin-mobile md:px-margin-desktop pt-36 pb-20 z-10">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 z-0">
             <img 
