@@ -8,26 +8,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#203344",
-        "on-primary-container": "#a5b8ce",
+        primary: "#934a34", // Muted Terracotta (formerly secondary)
+        "on-primary-container": "#783521", // Dark terracotta text (formerly on-secondary-container)
         "surface-container-low": "#f4f3f1",
         "on-tertiary-fixed-variant": "#474743",
         "inverse-on-surface": "#f1f1ef",
         surface: "#faf9f7",
-        "on-primary-fixed": "#091d2e",
+        "on-primary-fixed": "#3b0a00", // formerly on-secondary-fixed
         "surface-container-lowest": "#ffffff",
-        "secondary-fixed-dim": "#ffb5a0",
+        "secondary-fixed-dim": "#b5c8df", // formerly primary-fixed-dim
         "on-error-container": "#93000a",
         background: "#faf9f7",
         "surface-container-highest": "#e3e2e0",
-        "on-primary-fixed-variant": "#36485b",
+        "on-primary-fixed-variant": "#75331f", // formerly on-secondary-fixed-variant
         "tertiary-fixed": "#e4e2dd",
         "surface-tint": "#4e6073",
         outline: "#727780",
         "on-tertiary-container": "#b8b6b2",
-        secondary: "#934a34",
-        "primary-fixed": "#d1e4fb",
-        "secondary-fixed": "#ffdbd1",
+        secondary: "#203344", // Slate Navy (formerly primary)
+        "primary-fixed": "#ffdbd1", // formerly secondary-fixed
+        "secondary-fixed": "#d1e4fb", // formerly primary-fixed
         "error-container": "#ffdad6",
         "surface-container-high": "#e9e8e6",
         error: "#ba1a1a",
@@ -36,21 +36,21 @@ export default {
         "on-tertiary-fixed": "#1b1c19",
         "on-secondary": "#ffffff",
         "on-error": "#ffffff",
-        "inverse-primary": "#b5c8df",
-        "secondary-container": "#fea186",
+        "inverse-primary": "#ffb5a0", // formerly secondary-fixed-dim (terracotta)
+        "secondary-container": "#37495c", // formerly primary-container
         "surface-variant": "#e3e2e0",
         "surface-dim": "#dadad8",
         "on-surface": "#1a1c1b",
-        "primary-container": "#37495c",
+        "primary-container": "#fea186", // formerly secondary-container
         "on-background": "#1a1c1b",
         "inverse-surface": "#2f3130",
-        "primary-fixed-dim": "#b5c8df",
-        "on-secondary-fixed-variant": "#75331f",
-        "on-secondary-fixed": "#3b0a00",
+        "primary-fixed-dim": "#ffb5a0", // formerly secondary-fixed-dim
+        "on-secondary-fixed-variant": "#36485b", // formerly on-primary-fixed-variant
+        "on-secondary-fixed": "#091d2e", // formerly on-primary-fixed
         "outline-variant": "#c1c7d0",
         "tertiary-fixed-dim": "#c8c6c2",
         "on-tertiary": "#ffffff",
-        "on-secondary-container": "#783521",
+        "on-secondary-container": "#a5b8ce", // formerly on-primary-container
         "surface-container": "#efeeec",
         "surface-bright": "#faf9f7",
         tertiary: "#31312e",

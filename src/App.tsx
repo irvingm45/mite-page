@@ -8,10 +8,10 @@ export default function App() {
 
   return (
     <>
-      {/* Global Liquid Blobs */}
-      <div className="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#bae6fd] rounded-full mix-blend-multiply filter blur-[100px] opacity-60 animate-blob pointer-events-none z-[-1]"></div>
-      <div className="fixed top-[20%] right-[-10%] w-[400px] h-[400px] bg-[#fed7aa] rounded-full mix-blend-multiply filter blur-[100px] opacity-60 animate-blob animation-delay-2000 pointer-events-none z-[-1]"></div>
-      <div className="fixed bottom-[-10%] left-[20%] w-[600px] h-[600px] bg-[#e0e7ff] rounded-full mix-blend-multiply filter blur-[120px] opacity-60 animate-blob animation-delay-4000 pointer-events-none z-[-1]"></div>
+      {/* Global Liquid Blobs (Distributed Palette Colors) */}
+      <div className="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#ffdbd1] rounded-full mix-blend-multiply filter blur-[100px] opacity-60 animate-blob pointer-events-none z-[-1]"></div>
+      <div className="fixed top-[20%] right-[-10%] w-[400px] h-[400px] bg-[#d1e4fb] rounded-full mix-blend-multiply filter blur-[100px] opacity-60 animate-blob animation-delay-2000 pointer-events-none z-[-1]"></div>
+      <div className="fixed bottom-[-10%] left-[20%] w-[600px] h-[600px] bg-[#f5e3d6] rounded-full mix-blend-multiply filter blur-[120px] opacity-60 animate-blob animation-delay-4000 pointer-events-none z-[-1]"></div>
       
       {/* TopNavBar Wrapper (Fixed/Sticky) */}
       <div className="fixed top-0 left-0 w-full z-50 flex justify-center p-4 pointer-events-none">
@@ -26,7 +26,7 @@ export default function App() {
             <a className="text-white/80 hover:text-white transition-colors font-semibold" href="#infrastructure">Infrastructure</a>
             <a className="text-white/80 hover:text-white transition-colors font-semibold" href="#why-choose-us">Benefits</a>
           </div>
-          <button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white shadow-[0_4px_15px_rgba(14,165,233,0.4)] border border-white/20 hover:scale-105 transition-all px-6 py-2 rounded-full font-label-md text-label-md font-bold">
+          <button className="bg-gradient-to-r from-[#b2533e] to-[#934a34] hover:from-[#c85a3e] hover:to-[#a3533e] text-white shadow-[0_4px_15px_rgba(147,74,52,0.4)] border border-white/20 hover:scale-105 transition-all px-6 py-2 rounded-full font-label-md text-label-md font-bold">
             Get a Quote
           </button>
         </nav>
@@ -44,13 +44,13 @@ export default function App() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMw997aBY6wMq_AkAp6iK-tlJzAyKIRIK9Uq2tniaT-7mRVs-12aET-bAT1EDY3sMeHVFWLcAEtsY--SgnQooUFA1p0Q5kOApwZcWC5D23iIeFU24DcSuTDotQXOGehg9C_hvNJgGJeZfN456FCUuSj02ZSSQbBo-vNxyalMdE1a2b9zQW3OAhbR6yHqooTQ08hihybbuw0upXiUACTQ5xerVAYCjxlPneE3AYVEyBJRtOCQgarhaBbovrl1nwri-fJnpFfDI-STk" 
             />
             {/* Soft gradient bottom overlay to blend with the rest of the page */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#f0f7fb] via-transparent to-black/30"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#faf9f7] via-transparent to-black/30"></div>
           </div>
 
           {/* Centered Content Container */}
           <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center justify-center gap-4">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-[#e0f2fe] px-4 py-1.5 rounded-full w-max shadow-sm mb-4">
-              <span className="material-symbols-outlined text-[16px] icon-fill text-[#38bdf8]">verified</span>
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-[#ffdbd1] px-4 py-1.5 rounded-full w-max shadow-sm mb-4">
+              <span className="material-symbols-outlined text-[16px] icon-fill text-[#fea186]">verified</span>
               <span className="font-label-sm text-label-sm uppercase tracking-wider font-bold">Mantenimiento Industrial</span>
             </div>
             
@@ -64,8 +64,8 @@ export default function App() {
               Cuidamos el entorno donde tu negocio
             </h2>
             
-            {/* Line 3: Typewriter Animation */}
-            <div className="font-headline font-bold text-4xl sm:text-5xl md:text-7xl text-sky-400 min-h-[60px] md:min-h-[100px] [text-shadow:_0_2px_12px_rgba(0,0,0,0.4)] select-none mt-2">
+            {/* Line 3: Typewriter Animation in Terracotta */}
+            <div className="font-headline font-bold text-4xl sm:text-5xl md:text-7xl text-[#ffb5a0] min-h-[60px] md:min-h-[100px] [text-shadow:_0_2px_12px_rgba(0,0,0,0.4)] select-none mt-2">
               <Typewriter
                 text={[
                   "crece.",
@@ -77,13 +77,13 @@ export default function App() {
                 waitTime={2200}
                 deleteSpeed={35}
                 cursorChar={"_"}
-                cursorClassName="text-sky-300 ml-2 animate-pulse"
+                cursorClassName="text-[#ffdbd1] ml-2 animate-pulse"
               />
             </div>
 
-            {/* Premium CTA Buttons */}
+            {/* Premium CTA Buttons (Terracotta Theme) */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <a href="#contact" className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white shadow-[0_8px_20px_rgba(14,165,233,0.4)] hover:shadow-[0_10px_25px_rgba(14,165,233,0.6)] hover:scale-105 transition-all duration-300 px-8 py-4 rounded-full font-label-md text-label-md flex items-center justify-center gap-2 font-bold">
+              <a href="#contact" className="bg-gradient-to-r from-[#b2533e] to-[#934a34] hover:from-[#c85a3e] hover:to-[#a3533e] text-white shadow-[0_8px_20px_rgba(147,74,52,0.4)] hover:shadow-[0_10px_25px_rgba(147,74,52,0.6)] hover:scale-105 transition-all duration-300 px-8 py-4 rounded-full font-label-md text-label-md flex items-center justify-center gap-2 font-bold">
                 Solicitar Diagnóstico Gratuito
                 <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
               </a>
@@ -100,16 +100,16 @@ export default function App() {
             <p className="text-center font-label-md text-label-md text-on-surface-variant mb-sm uppercase tracking-widest font-bold">Con la confianza de sectores clave</p>
             <div className="relative w-full overflow-hidden flex flex-row flex-nowrap opacity-80 [mask-image:_linear-gradient(to_right,_transparent_0,_white_10%_90%,_transparent_100%)]">
               <div className="flex shrink-0 items-center justify-around min-w-full gap-lg md:gap-xl py-2 animate-marquee-right px-[20px] md:px-[32px]">
-                <div className="flex items-center gap-2"><span className="material-symbols-outlined text-[32px] text-primary">school</span><span className="font-headline-sm text-headline-sm text-primary">Educación</span></div>
-                <div className="flex items-center gap-2"><span className="material-symbols-outlined text-[32px] text-primary">hotel</span><span className="font-headline-sm text-headline-sm text-primary">Hotelería</span></div>
-                <div className="flex items-center gap-2"><span className="material-symbols-outlined text-[32px] text-primary">business</span><span className="font-headline-sm text-headline-sm text-primary">Corporativo</span></div>
-                <div className="flex items-center gap-2"><span className="material-symbols-outlined text-[32px] text-primary">storefront</span><span className="font-headline-sm text-headline-sm text-primary">Retail</span></div>
+                <div className="flex items-center gap-2"><span className="material-symbols-outlined text-[32px] text-secondary">school</span><span className="font-headline-sm text-headline-sm text-secondary">Educación</span></div>
+                <div className="flex items-center gap-2"><span className="material-symbols-outlined text-[32px] text-secondary">hotel</span><span className="font-headline-sm text-headline-sm text-secondary">Hotelería</span></div>
+                <div className="flex items-center gap-2"><span className="material-symbols-outlined text-[32px] text-secondary">business</span><span className="font-headline-sm text-headline-sm text-secondary">Corporativo</span></div>
+                <div className="flex items-center gap-2"><span className="material-symbols-outlined text-[32px] text-secondary">storefront</span><span className="font-headline-sm text-headline-sm text-secondary">Retail</span></div>
               </div>
               <div className="flex shrink-0 items-center justify-around min-w-full gap-lg md:gap-xl py-2 animate-marquee-right px-[20px] md:px-[32px]" aria-hidden="true">
-                <div className="flex items-center gap-2"><span className="material-symbols-outlined text-[32px] text-primary">school</span><span className="font-headline-sm text-headline-sm text-primary">Educación</span></div>
-                <div className="flex items-center gap-2"><span className="material-symbols-outlined text-[32px] text-primary">hotel</span><span className="font-headline-sm text-headline-sm text-primary">Hotelería</span></div>
-                <div className="flex items-center gap-2"><span className="material-symbols-outlined text-[32px] text-primary">business</span><span className="font-headline-sm text-headline-sm text-primary">Corporativo</span></div>
-                <div className="flex items-center gap-2"><span className="material-symbols-outlined text-[32px] text-primary">storefront</span><span className="font-headline-sm text-headline-sm text-primary">Retail</span></div>
+                <div className="flex items-center gap-2"><span className="material-symbols-outlined text-[32px] text-secondary">school</span><span className="font-headline-sm text-headline-sm text-secondary">Educación</span></div>
+                <div className="flex items-center gap-2"><span className="material-symbols-outlined text-[32px] text-secondary">hotel</span><span className="font-headline-sm text-headline-sm text-secondary">Hotelería</span></div>
+                <div className="flex items-center gap-2"><span className="material-symbols-outlined text-[32px] text-secondary">business</span><span className="font-headline-sm text-headline-sm text-secondary">Corporativo</span></div>
+                <div className="flex items-center gap-2"><span className="material-symbols-outlined text-[32px] text-secondary">storefront</span><span className="font-headline-sm text-headline-sm text-secondary">Retail</span></div>
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@ export default function App() {
             {/* Pillar 1 */}
             <div id="hvac" className="bg-white/50 backdrop-blur-2xl p-lg rounded-[2rem] shadow-[0_8px_32px_rgba(0,0,0,0.05),inset_0_0_20px_rgba(255,255,255,0.8)] border border-white/60 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(0,0,0,0.1),inset_0_0_30px_rgba(255,255,255,1)] transition-all duration-300 relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/60 to-transparent pointer-events-none transition-opacity group-hover:opacity-100"></div>
-              <div className="w-16 h-16 bg-gradient-to-br from-[#d0e4ff] to-[#9ccaff] rounded-2xl flex items-center justify-center mb-md text-[#003358] shadow-[inset_0_2px_10px_rgba(255,255,255,0.9),0_4px_15px_rgba(156,202,255,0.5)] border border-white/50 relative z-10">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#ffdbd1] to-[#ffb5a0] rounded-2xl flex items-center justify-center mb-md text-[#783521] shadow-[inset_0_2px_10px_rgba(255,255,255,0.9),0_4px_15px_rgba(255,181,160,0.5)] border border-white/50 relative z-10">
                 <span className="material-symbols-outlined text-[32px] icon-fill">mode_fan</span>
               </div>
               <h3 className="font-headline-sm text-headline-sm text-on-surface mb-xs relative z-10">Clima Perfecto</h3>
@@ -134,7 +134,7 @@ export default function App() {
             {/* Pillar 2 */}
             <div id="electrical" className="bg-white/50 backdrop-blur-2xl p-lg rounded-[2rem] shadow-[0_8px_32px_rgba(0,0,0,0.05),inset_0_0_20px_rgba(255,255,255,0.8)] border border-white/60 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(0,0,0,0.1),inset_0_0_30px_rgba(255,255,255,1)] transition-all duration-300 relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/60 to-transparent pointer-events-none transition-opacity group-hover:opacity-100"></div>
-              <div className="w-16 h-16 bg-gradient-to-br from-[#ffddb8] to-[#ffb95f] rounded-2xl flex items-center justify-center mb-md text-[#684000] shadow-[inset_0_2px_10px_rgba(255,255,255,0.9),0_4px_15px_rgba(255,185,95,0.5)] border border-white/50 relative z-10">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#d1e4fb] to-[#a5b8ce] rounded-2xl flex items-center justify-center mb-md text-[#091d2e] shadow-[inset_0_2px_10px_rgba(255,255,255,0.9),0_4px_15px_rgba(165,184,206,0.5)] border border-white/50 relative z-10">
                 <span className="material-symbols-outlined text-[32px] icon-fill">bolt</span>
               </div>
               <h3 className="font-headline-sm text-headline-sm text-on-surface mb-xs relative z-10">Energía Ininterrumpida</h3>
@@ -143,7 +143,7 @@ export default function App() {
             {/* Pillar 3 */}
             <div id="infrastructure" className="bg-white/50 backdrop-blur-2xl p-lg rounded-[2rem] shadow-[0_8px_32px_rgba(0,0,0,0.05),inset_0_0_20px_rgba(255,255,255,0.8)] border border-white/60 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(0,0,0,0.1),inset_0_0_30px_rgba(255,255,255,1)] transition-all duration-300 relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/60 to-transparent pointer-events-none transition-opacity group-hover:opacity-100"></div>
-              <div className="w-16 h-16 bg-gradient-to-br from-[#d3e4fe] to-[#a6b7d0] rounded-2xl flex items-center justify-center mb-md text-[#0b1c30] shadow-[inset_0_2px_10px_rgba(255,255,255,0.9),0_4px_15px_rgba(166,183,208,0.5)] border border-white/50 relative z-10">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#e4e2dd] to-[#c8c6c2] rounded-2xl flex items-center justify-center mb-md text-[#31312e] shadow-[inset_0_2px_10px_rgba(255,255,255,0.9),0_4px_15px_rgba(200,198,194,0.5)] border border-white/50 relative z-10">
                 <span className="material-symbols-outlined text-[32px] icon-fill">shield</span>
               </div>
               <h3 className="font-headline-sm text-headline-sm text-on-surface mb-xs relative z-10">Espacios Seguros</h3>
@@ -157,10 +157,10 @@ export default function App() {
           <div className="max-w-7xl mx-auto">
             <h2 className="font-headline-md text-headline-md text-primary mb-xl text-center">Por qué elegir MITE</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-sm h-auto md:h-[500px]">
-              {/* Large Card */}
+              {/* Large Card (Terracotta Overlay) */}
               <div className="md:col-span-2 md:row-span-2 bg-white/40 backdrop-blur-2xl rounded-[2rem] shadow-[0_8px_32px_rgba(0,0,0,0.05),inset_0_0_20px_rgba(255,255,255,0.5)] border border-white/60 p-lg flex flex-col justify-end relative overflow-hidden group">
                 <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Technician inspecting an electrical panel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF-D5xmWRHkE-EC3lPXIbYo-POA6lbtLwvUFokwtZYGj6VGwSTBXgqVq5Z1zRqGUJpjNCrNoHuUWQ2YMQmEuFRsx6Ike_2PUSMa45O16HZ67PC3K-BCfTk4jd31XJ02QfCKWdtho_yJlfdjmrR5ejNx1E8sWt6Ygq2bnvh05yqM5wWjJ5gi37xLlVfzV1WK_DzFEjwmM3TCO5zFWRzamtaNlEFTaZ6DDcf152Ja6UvSo3gQrHTqe0q23bTIM4nULomzlcyNWJKnfo" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#003358]/90 via-[#003358]/30 to-transparent backdrop-blur-[2px]"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#783521]/90 via-[#783521]/30 to-transparent backdrop-blur-[2px]"></div>
                 <div className="absolute inset-0 ring-1 ring-inset ring-white/20 rounded-[2rem]"></div>
                 <div className="relative z-10 text-white">
                   <div className="flex items-center gap-xs mb-sm"><span className="material-symbols-outlined icon-fill drop-shadow-md">verified_user</span></div>
@@ -171,21 +171,21 @@ export default function App() {
               {/* Medium Card Top */}
               <div className="md:col-span-2 bg-white/60 backdrop-blur-2xl rounded-[2rem] shadow-[0_8px_32px_rgba(0,0,0,0.05),inset_0_0_20px_rgba(255,255,255,0.8)] border border-white/70 p-md flex items-center gap-md relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/60 to-transparent pointer-events-none"></div>
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#ffddb8] to-[#ffb95f] shadow-[inset_0_2px_10px_rgba(255,255,255,0.8)] border border-white/50 flex items-center justify-center shrink-0 relative z-10">
-                  <span className="material-symbols-outlined text-[#684000]">support_agent</span>
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#ffdbd1] to-[#ffb5a0] shadow-[inset_0_2px_10px_rgba(255,255,255,0.8)] border border-white/50 flex items-center justify-center shrink-0 relative z-10">
+                  <span className="material-symbols-outlined text-[#783521]">support_agent</span>
                 </div>
                 <div className="relative z-10">
                   <h3 className="font-label-md text-label-md text-on-surface mb-1 font-bold">Soporte 24/7</h3>
                   <p className="font-body-sm text-body-sm text-on-surface-variant">Atención continua para emergencias críticas. Nunca estás solo ante una falla de infraestructura.</p>
                 </div>
               </div>
-              {/* Small Cards Bottom */}
-              <div className="bg-gradient-to-br from-[#004a7c] to-[#0065ad] text-white rounded-[2rem] shadow-[0_8px_20px_rgba(0,74,124,0.3),inset_0_2px_15px_rgba(255,255,255,0.3)] border border-white/20 p-md flex flex-col justify-center items-center text-center relative overflow-hidden group">
+              {/* Small Cards Bottom (Terracotta and Slate Navy) */}
+              <div className="bg-gradient-to-br from-[#934a34] to-[#75331f] text-white rounded-[2rem] shadow-[0_8px_20px_rgba(147,74,52,0.3),inset_0_2px_15px_rgba(255,255,255,0.3)] border border-white/20 p-md flex flex-col justify-center items-center text-center relative overflow-hidden group">
                 <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/20 to-transparent pointer-events-none"></div>
                 <span className="material-symbols-outlined text-[40px] mb-xs opacity-90 drop-shadow-md relative z-10 group-hover:scale-110 transition-transform">engineering</span>
                 <h3 className="font-label-md text-label-md relative z-10 drop-shadow-sm">Técnicos Certificados</h3>
               </div>
-              <div className="bg-gradient-to-br from-[#223246] to-[#38485d] text-white rounded-[2rem] shadow-[0_8px_20px_rgba(34,50,70,0.3),inset_0_2px_15px_rgba(255,255,255,0.2)] border border-white/10 p-md flex flex-col justify-center items-center text-center relative overflow-hidden group">
+              <div className="bg-gradient-to-br from-[#203344] to-[#36485b] text-white rounded-[2rem] shadow-[0_8px_20px_rgba(32,51,68,0.3),inset_0_2px_15px_rgba(255,255,255,0.2)] border border-white/10 p-md flex flex-col justify-center items-center text-center relative overflow-hidden group">
                 <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/10 to-transparent pointer-events-none"></div>
                 <span className="material-symbols-outlined text-[40px] mb-xs opacity-90 drop-shadow-md relative z-10 group-hover:scale-110 transition-transform">handyman</span>
                 <h3 className="font-label-md text-label-md relative z-10 drop-shadow-sm">Equipamiento Premium</h3>
@@ -206,22 +206,22 @@ export default function App() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-sm">
                 <div>
                   <label className="block font-label-sm text-label-sm text-on-surface-variant mb-1 ml-2">Nombre Completo</label>
-                  <input required className="w-full bg-white/50 backdrop-blur-md border border-white/80 rounded-2xl focus:bg-white/80 focus:ring-2 focus:ring-[#0075c4] px-4 py-3 font-body-md text-body-md text-[#0b1c30] transition-all shadow-[inset_0_2px_5px_rgba(0,0,0,0.02)]" placeholder="Ej. Juan Pérez" type="text" />
+                  <input required className="w-full bg-white/50 backdrop-blur-md border border-white/80 rounded-2xl focus:bg-white/80 focus:ring-2 focus:ring-[#934a34] px-4 py-3 font-body-md text-body-md text-[#0b1c30] transition-all shadow-[inset_0_2px_5px_rgba(0,0,0,0.02)]" placeholder="Ej. Juan Pérez" type="text" />
                 </div>
                 <div>
                   <label className="block font-label-sm text-label-sm text-on-surface-variant mb-1 ml-2">Empresa / Sector</label>
-                  <input required className="w-full bg-white/50 backdrop-blur-md border border-white/80 rounded-2xl focus:bg-white/80 focus:ring-2 focus:ring-[#0075c4] px-4 py-3 font-body-md text-body-md text-[#0b1c30] transition-all shadow-[inset_0_2px_5px_rgba(0,0,0,0.02)]" placeholder="Ej. Hotel Central" type="text" />
+                  <input required className="w-full bg-white/50 backdrop-blur-md border border-white/80 rounded-2xl focus:bg-white/80 focus:ring-2 focus:ring-[#934a34] px-4 py-3 font-body-md text-body-md text-[#0b1c30] transition-all shadow-[inset_0_2px_5px_rgba(0,0,0,0.02)]" placeholder="Ej. Hotel Central" type="text" />
                 </div>
               </div>
               <div>
                 <label className="block font-label-sm text-label-sm text-on-surface-variant mb-1 ml-2">Correo Electrónico</label>
-                <input required className="w-full bg-white/50 backdrop-blur-md border border-white/80 rounded-2xl focus:bg-white/80 focus:ring-2 focus:ring-[#0075c4] px-4 py-3 font-body-md text-body-md text-[#0b1c30] transition-all shadow-[inset_0_2px_5px_rgba(0,0,0,0.02)]" placeholder="correo@empresa.com" type="email" />
+                <input required className="w-full bg-white/50 backdrop-blur-md border border-white/80 rounded-2xl focus:bg-white/80 focus:ring-2 focus:ring-[#934a34] px-4 py-3 font-body-md text-body-md text-[#0b1c30] transition-all shadow-[inset_0_2px_5px_rgba(0,0,0,0.02)]" placeholder="correo@empresa.com" type="email" />
               </div>
               <div>
                 <label className="block font-label-sm text-label-sm text-on-surface-variant mb-1 ml-2">Mensaje o Necesidad Principal</label>
-                <textarea required className="w-full bg-white/50 backdrop-blur-md border border-white/80 rounded-2xl focus:bg-white/80 focus:ring-2 focus:ring-[#0075c4] px-4 py-3 font-body-md text-body-md text-[#0b1c30] transition-all shadow-[inset_0_2px_5px_rgba(0,0,0,0.02)] resize-none" placeholder="Describe brevemente tus necesidades de mantenimiento..." rows={4}></textarea>
+                <textarea required className="w-full bg-white/50 backdrop-blur-md border border-white/80 rounded-2xl focus:bg-white/80 focus:ring-2 focus:ring-[#934a34] px-4 py-3 font-body-md text-body-md text-[#0b1c30] transition-all shadow-[inset_0_2px_5px_rgba(0,0,0,0.02)] resize-none" placeholder="Describe brevemente tus necesidades de mantenimiento..." rows={4}></textarea>
               </div>
-              <button className="w-full bg-gradient-to-r from-[#004a7c] to-[#0075c4] text-white shadow-[0_8px_20px_rgba(0,74,124,0.4)] border border-white/30 hover:shadow-[0_10px_25px_rgba(0,74,124,0.5)] transition-all py-4 rounded-full font-label-md text-label-md mt-md flex items-center justify-center font-bold" type="submit">
+              <button className="w-full bg-gradient-to-r from-[#934a34] to-[#75331f] text-white shadow-[0_8px_20px_rgba(147,74,52,0.4)] border border-white/30 hover:shadow-[0_10px_25px_rgba(147,74,52,0.5)] transition-all py-4 rounded-full font-label-md text-label-md mt-md flex items-center justify-center font-bold" type="submit">
                 Enviar Mensaje
               </button>
             </form>
@@ -238,10 +238,10 @@ export default function App() {
           © 2026 MITE Industrial Maintenance. Comfort, Safety, and Continuity.
         </div>
         <div className="flex flex-wrap gap-md">
-          <a className="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#">Privacy Policy</a>
-          <a className="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#">Terms of Service</a>
-          <a className="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#">Certifications</a>
-          <a className="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#">Contact Us</a>
+          <a className="text-on-tertiary-container hover:text-[#ffb5a0] transition-colors" href="#">Privacy Policy</a>
+          <a className="text-on-tertiary-container hover:text-[#ffb5a0] transition-colors" href="#">Terms of Service</a>
+          <a className="text-on-tertiary-container hover:text-[#ffb5a0] transition-colors" href="#">Certifications</a>
+          <a className="text-on-tertiary-container hover:text-[#ffb5a0] transition-colors" href="#">Contact Us</a>
         </div>
       </footer>
     </>
