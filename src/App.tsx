@@ -280,7 +280,7 @@ export default function App() {
             <div id="energy-efficiency" className="relative min-h-[250px] md:min-h-[380px] lg:min-h-[400px] rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] hover:border-[#ffeedd]/40 transition-all duration-300 group flex items-stretch" style={{ transform: "translateZ(0)" }}>
               <img
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="eficiencia_energia.jpg"
+                src="eficiencia_energia.webp"
                 alt="Eficiencia y Calidad de Energía"
                 loading="lazy"
               />
@@ -309,7 +309,7 @@ export default function App() {
             <div id="training" className="relative min-h-[250px] md:min-h-[380px] lg:min-h-[400px] rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] hover:border-[#e4e2dd]/40 transition-all duration-300 group flex items-stretch" style={{ transform: "translateZ(0)" }}>
               <img
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="capacitacion_tecnica.jpg"
+                src="capacitacion_tecnica.webp"
                 alt="Capacitación y Cursos Técnicos"
                 loading="lazy"
               />
