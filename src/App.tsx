@@ -339,55 +339,49 @@ export default function App() {
 
         {/* Acerca de Nosotros */}
         <section id="about" className="py-xl px-margin-mobile md:px-margin-desktop bg-transparent max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Column: Visual Image with Floating Badge */}
-            <div className="lg:col-span-5 relative h-[350px] md:h-[450px] rounded-[2rem] overflow-hidden border border-white/30 shadow-lg" style={{ transform: "translateZ(0)" }}>
+          <div className="grid grid-cols-12 gap-6 md:gap-12 items-center">
+            {/* Left Column: Visual Image */}
+            <div className="col-span-4 sm:col-span-5 relative rounded-[2rem] overflow-hidden border border-white/30 shadow-lg" style={{ transform: "translateZ(0)" }}>
               <img
-                className="w-full h-full object-cover"
-                src="calefaccion.webp"
-                alt="Oficinas de MITE Industrial"
+                className="w-full h-auto block"
+                src="logo.webp"
+                alt="Logo MITE Industrial"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-              {/* Floating "10 Años" Stamp Badge */}
-              <div className="absolute bottom-6 right-6 bg-[#934a34] text-white p-6 rounded-full w-32 h-32 flex flex-col items-center justify-center text-center shadow-lg border border-white/20 rotate-12 hover:rotate-0 transition-transform duration-300">
-                <span className="font-display font-extrabold text-3xl leading-none">10</span>
-                <span className="font-label-sm text-[10px] uppercase tracking-wider font-bold mt-1">Años</span>
-              </div>
             </div>
             {/* Right Column: Copywriting & Founders */}
-            <div className="lg:col-span-7 flex flex-col gap-5 justify-center">
-              <div className="inline-flex items-center gap-2 bg-[#d1e4fb] text-[#091d2e] border border-[#a5b8ce]/30 px-4 py-1.5 rounded-full w-max shadow-sm">
-                <span className="material-symbols-outlined text-[16px] icon-fill">groups</span>
-                <span className="font-label-sm text-label-sm uppercase tracking-wider font-bold">Acerca de Nosotros</span>
+            <div className="col-span-8 sm:col-span-7 flex flex-col gap-3 sm:gap-5 justify-center">
+              <div className="inline-flex items-center gap-2 bg-[#d1e4fb] text-[#091d2e] border border-[#a5b8ce]/30 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full w-max shadow-sm">
+                <span className="material-symbols-outlined text-[14px] sm:text-[16px] icon-fill">groups</span>
+                <span className="font-label-sm text-[10px] sm:text-label-sm uppercase tracking-wider font-bold">Acerca de Nosotros</span>
               </div>
-              <h2 className="font-display font-bold text-4xl md:text-5xl text-secondary leading-tight">
+              <h2 className="font-display font-bold text-lg sm:text-4xl md:text-5xl text-secondary leading-snug">
                 10 Años de Experiencia en el Sector.
               </h2>
-              <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                Fundada por los socios <strong className="text-secondary font-bold">Lisandro Cruzado Vázquez</strong> y <strong className="text-secondary font-bold">Roberto Daniel Reyes López</strong>, MITE está conformada por ingenieros mecánicos reconocidos y altamente capacitados.
+              <p className="text-xs sm:text-body-md text-on-surface-variant leading-relaxed">
+                Fundada por los socios <strong className="text-secondary font-bold">Lisandro Cruzado Vázquez</strong> y <strong className="text-secondary font-bold">Roberto Daniel Reyes López</strong>, MITE está conformada por ingenieros reconocidos y altamente capacitados.
               </p>
-              <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed font-semibold">
+              <p className="text-xs sm:text-body-md text-on-surface-variant leading-relaxed font-semibold">
                 Llevamos una década realizando trabajos de precisión en cualquier área, asegurando la continuidad de tus operaciones.
               </p>
               {/* Technical Certifications / Trust highlights */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2 border-t border-slate-200/60 pt-6">
-                <div className="flex items-center gap-3 bg-white/30 backdrop-blur-md border border-white/40 p-3 rounded-2xl">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#934a34] to-[#75331f] text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-sm">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 mt-2 border-t border-slate-200/60 pt-4 sm:pt-6">
+                <div className="flex items-center gap-2 sm:gap-3 bg-white/30 backdrop-blur-md border border-white/40 p-2 sm:p-3 rounded-xl sm:rounded-2xl">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-[#934a34] to-[#75331f] text-white flex items-center justify-center font-bold text-xs sm:text-sm shrink-0 shadow-sm">
                     LC
                   </div>
                   <div>
-                    <h4 className="font-label-md text-label-md font-bold text-secondary">Lisandro Cruzado V.</h4>
-                    <p className="text-[11px] text-[#934a34] font-semibold">Socio Fundador / Ing. Mecánico</p>
+                    <h4 className="font-label-md text-[10px] sm:text-xs md:text-label-md font-bold text-secondary">Lisandro Cruzado V.</h4>
+                    <p className="text-[8px] sm:text-[10px] md:text-[11px] text-[#934a34] font-semibold">Socio Fundador / Ing. Mecánico</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 bg-white/30 backdrop-blur-md border border-white/40 p-3 rounded-2xl">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#203344] to-[#36485b] text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-sm">
+                <div className="flex items-center gap-2 sm:gap-3 bg-white/30 backdrop-blur-md border border-white/40 p-2 sm:p-3 rounded-xl sm:rounded-2xl">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-[#203344] to-[#36485b] text-white flex items-center justify-center font-bold text-xs sm:text-sm shrink-0 shadow-sm">
                     RR
                   </div>
                   <div>
-                    <h4 className="font-label-md text-label-md font-bold text-secondary">Roberto Daniel Reyes L.</h4>
-                    <p className="text-[11px] text-[#934a34] font-semibold">Socio Fundador / Ing. Mecánico</p>
+                    <h4 className="font-label-md text-[10px] sm:text-xs md:text-label-md font-bold text-secondary">Roberto Daniel Reyes L.</h4>
+                    <p className="text-[8px] sm:text-[10px] md:text-[11px] text-[#934a34] font-semibold">Socio Fundador / Ing. Mecánico</p>
                   </div>
                 </div>
               </div>
