@@ -545,11 +545,12 @@ export default function App() {
                 <label className="block font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold ml-1">
                   2. Escala del Proyecto
                 </label>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-white/30 p-1.5 rounded-2xl border border-slate-200/50">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 bg-white/30 p-1.5 rounded-2xl border border-slate-200/50">
                   {[
                     { id: "pequeno", label: "Comercial / PYME", desc: "Locales y oficinas" },
                     { id: "medio", label: "Corporativo / Educativo", desc: "Edificios y escuelas" },
-                    { id: "grande", label: "Industrial / Hospitalario", desc: "Naves y clínicas" }
+                    { id: "grande", label: "Industrial / Hospitalario", desc: "Naves y clínicas" },
+                    { id: "otro", label: "Otro", desc: "Detallar en el mensaje" }
                   ].map((scale) => {
                     const isSelected = projectScale === scale.id
                     return (
