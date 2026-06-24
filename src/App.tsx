@@ -11,8 +11,6 @@ export default function App() {
     alert("¡Mensaje enviado con éxito! Nos contactaremos a la brevedad.")
   }
 
-  const glassCardClass = "w-full sm:w-[90%] md:w-[80%] lg:w-[92%] h-full bg-white/45 backdrop-blur-md border border-white/40 shadow-lg rounded-2xl md:rounded-[1.5rem] p-4 md:p-6 flex flex-col justify-center relative z-10"
-
   return (
     <>
       {/* Background Textures */}
@@ -152,185 +150,208 @@ export default function App() {
             </div>
           </div>
         </section>
-
         {/* Service Pillars */}
         <section id="services" className="py-xl px-margin-mobile md:px-margin-desktop bg-transparent max-w-7xl mx-auto">
           <div className="text-center mb-xl">
             <h2 className="font-headline-md text-headline-md text-primary mb-sm">Pilares de Servicio MITE</h2>
             <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Mantenimiento preventivo y correctivo diseñado para garantizar la operatividad de tus espacios comerciales.</p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Pillar 1: HVAC */}
-            <div id="hvac" className="relative min-h-[250px] md:min-h-[380px] lg:min-h-[400px] rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] hover:border-[#ffb5a0]/40 transition-all duration-300 group flex items-stretch" style={{ transform: "translateZ(0)" }}>
-              <img
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="hvac_C.webp"
-                alt="HVAC y Refrigeración"
-                loading="lazy"
-              />
-              <div className="relative w-full p-3 md:p-5 bg-black/5 flex items-stretch justify-start">
-                <div className={glassCardClass}>
-                  <div>
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#ffdbd1] to-[#ffb5a0] rounded-xl flex items-center justify-center mb-3 md:mb-4 text-[#783521] border border-white/50 shadow-sm">
-                      <span className="material-symbols-outlined text-[24px] md:text-[28px] icon-fill">ac_unit</span>
+            <div id="hvac" className="relative rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:border-[#ffb5a0]/30 transition-all duration-300 group flex flex-col bg-white/70 backdrop-blur-xs" style={{ transform: "translateZ(0)" }}>
+              <div className="w-full h-[200px] overflow-hidden relative">
+                <img
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  src="hvac_C.webp"
+                  alt="HVAC y Refrigeración"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/[0.03]"></div>
+              </div>
+              <div className="flex-grow p-5 md:p-6 flex flex-col justify-between border-t border-white/30">
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#ffdbd1] to-[#ffb5a0] rounded-xl flex items-center justify-center text-[#783521] border border-white/50 shadow-sm shrink-0">
+                      <span className="material-symbols-outlined text-[22px] icon-fill">ac_unit</span>
                     </div>
-                    <h3 className="font-headline-sm text-headline-sm text-on-surface mb-1 font-bold">HVAC y Refrigeración</h3>
-                    <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-3">
-                      Proyectos y mantenimiento correctivo/preventivo de sistemas de aire acondicionado y refrigeración comercial o industrial.
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {["Chillers", "Sistemas VRF", "Cámaras Frías", "Aire Acondicionado"].map((tag) => (
-                        <span key={tag} className="bg-white/80 text-[#783521] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#ffdbd1]/60 shadow-xs">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                    <h3 className="font-headline-sm text-[16px] md:text-[18px] text-on-surface font-bold leading-tight">HVAC y Refrigeración</h3>
                   </div>
+                  <p className="font-body-sm text-[12px] md:text-[13px] text-on-surface-variant leading-relaxed mb-4">
+                    Proyectos y mantenimiento correctivo/preventivo de sistemas de aire acondicionado y refrigeración comercial o industrial.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mt-auto">
+                  {["Chillers", "Sistemas VRF", "Cámaras Frías", "Aire Acondicionado"].map((tag) => (
+                    <span key={tag} className="bg-white/80 text-[#783521] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#ffdbd1]/60 shadow-xs">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
+
             {/* Pillar 2: Electrical */}
-            <div id="electrical" className="relative min-h-[250px] md:min-h-[380px] lg:min-h-[400px] rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] hover:border-[#a5b8ce]/40 transition-all duration-300 group flex items-stretch" style={{ transform: "translateZ(0)" }}>
-              <img
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="electric_instalation_C.webp"
-                alt="Instalaciones Eléctricas"
-                loading="lazy"
-              />
-              <div className="relative w-full p-3 md:p-5 bg-black/5 flex items-stretch justify-start">
-                <div className={glassCardClass}>
-                  <div>
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#d1e4fb] to-[#a5b8ce] rounded-xl flex items-center justify-center mb-3 md:mb-4 text-[#091d2e] border border-white/50 shadow-sm">
-                      <span className="material-symbols-outlined text-[24px] md:text-[28px] icon-fill">bolt</span>
+            <div id="electrical" className="relative rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:border-[#a5b8ce]/30 transition-all duration-300 group flex flex-col bg-white/70 backdrop-blur-xs" style={{ transform: "translateZ(0)" }}>
+              <div className="w-full h-[200px] overflow-hidden relative">
+                <img
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  src="electric_instalation_C.webp"
+                  alt="Instalaciones Eléctricas"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/[0.03]"></div>
+              </div>
+              <div className="flex-grow p-5 md:p-6 flex flex-col justify-between border-t border-white/30">
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#d1e4fb] to-[#a5b8ce] rounded-xl flex items-center justify-center text-[#091d2e] border border-white/50 shadow-sm shrink-0">
+                      <span className="material-symbols-outlined text-[22px] icon-fill">bolt</span>
                     </div>
-                    <h3 className="font-headline-sm text-headline-sm text-on-surface mb-1 font-bold">Instalaciones Eléctricas</h3>
-                    <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-3">
-                      Ingeniería y mantenimiento preventivo y correctivo para redes de baja, media y alta tensión, asegurando un suministro continuo.
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {["Alta, Media y Baja Tensión", "Subestaciones", "Tableros", "Redes de Tierra"].map((tag) => (
-                        <span key={tag} className="bg-white/80 text-[#091d2e] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#d1e4fb]/60 shadow-xs">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                    <h3 className="font-headline-sm text-[16px] md:text-[18px] text-on-surface font-bold leading-tight">Instalaciones Eléctricas</h3>
                   </div>
+                  <p className="font-body-sm text-[12px] md:text-[13px] text-on-surface-variant leading-relaxed mb-4">
+                    Ingeniería y mantenimiento preventivo y correctivo para redes de baja, media y alta tensión, asegurando un suministro continuo.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mt-auto">
+                  {["Alta, Media y Baja Tensión", "Subestaciones", "Tableros", "Redes de Tierra"].map((tag) => (
+                    <span key={tag} className="bg-white/80 text-[#091d2e] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#d1e4fb]/60 shadow-xs">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
+
             {/* Pillar 3: Backups & Networks */}
-            <div id="backups" className="relative min-h-[250px] md:min-h-[380px] lg:min-h-[400px] rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] hover:border-[#ffeedd]/40 transition-all duration-300 group flex items-stretch" style={{ transform: "translateZ(0)" }}>
-              <img
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="ups_C.webp"
-                alt="Sistemas UPS y Redes"
-                loading="lazy"
-              />
-              <div className="relative w-full p-3 md:p-5 bg-black/5 flex items-stretch justify-start">
-                <div className={glassCardClass}>
-                  <div>
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#ffeedd] to-[#fea186] rounded-xl flex items-center justify-center mb-3 md:mb-4 text-[#76331f] border border-white/50 shadow-sm">
-                      <span className="material-symbols-outlined text-[24px] md:text-[28px] icon-fill">battery_charging_full</span>
+            <div id="backups" className="relative rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:border-[#ffeedd]/30 transition-all duration-300 group flex flex-col bg-white/70 backdrop-blur-xs" style={{ transform: "translateZ(0)" }}>
+              <div className="w-full h-[200px] overflow-hidden relative">
+                <img
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  src="ups_C.webp"
+                  alt="Sistemas UPS y Redes"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/[0.03]"></div>
+              </div>
+              <div className="flex-grow p-5 md:p-6 flex flex-col justify-between border-t border-white/30">
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#ffeedd] to-[#fea186] rounded-xl flex items-center justify-center text-[#76331f] border border-white/50 shadow-sm shrink-0">
+                      <span className="material-symbols-outlined text-[22px] icon-fill">battery_charging_full</span>
                     </div>
-                    <h3 className="font-headline-sm text-headline-sm text-on-surface mb-1 font-bold">Sistemas UPS y Redes</h3>
-                    <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-3">
-                      Mantenimiento de sistemas UPS para el respaldo de energía ininterrumpida y soluciones integrales en cableado estructurado de redes.
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {["Respaldo Crítico", "Bancos de Baterías", "Cableado de Redes", "Fibra Óptica"].map((tag) => (
-                        <span key={tag} className="bg-white/80 text-[#76331f] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#ffeedd]/60 shadow-xs">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                    <h3 className="font-headline-sm text-[16px] md:text-[18px] text-on-surface font-bold leading-tight">Sistemas UPS y Redes</h3>
                   </div>
+                  <p className="font-body-sm text-[12px] md:text-[13px] text-on-surface-variant leading-relaxed mb-4">
+                    Mantenimiento de sistemas UPS para el respaldo de energía ininterrumpida y soluciones integrales en cableado estructurado de redes.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mt-auto">
+                  {["Respaldo Crítico", "Bancos de Baterías", "Cableado de Redes", "Fibra Óptica"].map((tag) => (
+                    <span key={tag} className="bg-white/80 text-[#76331f] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#ffeedd]/60 shadow-xs">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
+
             {/* Pillar 4: Infrastructure & Machinery */}
-            <div id="infrastructure" className="relative min-h-[250px] md:min-h-[380px] lg:min-h-[400px] rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] hover:border-[#e4e2dd]/40 transition-all duration-300 group flex items-stretch" style={{ transform: "translateZ(0)" }}>
-              <img
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="obra_civil_C.webp"
-                alt="Maquinaria y Obra Civil"
-                loading="lazy"
-              />
-              <div className="relative w-full p-3 md:p-5 bg-black/5 flex items-stretch justify-start">
-                <div className={glassCardClass}>
-                  <div>
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#e4e2dd] to-[#c8c6c2] rounded-xl flex items-center justify-center mb-3 md:mb-4 text-[#31312e] border border-white/50 shadow-sm">
-                      <span className="material-symbols-outlined text-[24px] md:text-[28px] icon-fill">construction</span>
+            <div id="infrastructure" className="relative rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:border-[#e4e2dd]/30 transition-all duration-300 group flex flex-col bg-white/70 backdrop-blur-xs" style={{ transform: "translateZ(0)" }}>
+              <div className="w-full h-[200px] overflow-hidden relative">
+                <img
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  src="obra_civil_C.webp"
+                  alt="Maquinaria y Obra Civil"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/[0.03]"></div>
+              </div>
+              <div className="flex-grow p-5 md:p-6 flex flex-col justify-between border-t border-white/30">
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#e4e2dd] to-[#c8c6c2] rounded-xl flex items-center justify-center text-[#31312e] border border-white/50 shadow-sm shrink-0">
+                      <span className="material-symbols-outlined text-[22px] icon-fill">construction</span>
                     </div>
-                    <h3 className="font-headline-sm text-headline-sm text-on-surface mb-1 font-bold">Maquinaria y Obra Civil</h3>
-                    <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-3">
-                      Mantenimiento preventivo/correctivo de maquinaria industrial y el desarrollo de todo tipo de obra civil e infraestructura física.
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {["Montaje Industrial", "Obra Civil", "Estructuras", "Pintura Epóxica"].map((tag) => (
-                        <span key={tag} className="bg-white/80 text-[#31312e] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#e4e2dd]/60 shadow-xs">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                    <h3 className="font-headline-sm text-[16px] md:text-[18px] text-on-surface font-bold leading-tight">Maquinaria y Obra Civil</h3>
                   </div>
+                  <p className="font-body-sm text-[12px] md:text-[13px] text-on-surface-variant leading-relaxed mb-4">
+                    Mantenimiento preventivo/correctivo de maquinaria industrial y el desarrollo de todo tipo de obra civil e infraestructura física.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mt-auto">
+                  {["Montaje Industrial", "Obra Civil", "Estructuras", "Pintura Epóxica"].map((tag) => (
+                    <span key={tag} className="bg-white/80 text-[#31312e] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#e4e2dd]/60 shadow-xs">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
+
             {/* Pillar 5: Eficiencia y Calidad de Energía */}
-            <div id="energy-efficiency" className="relative min-h-[250px] md:min-h-[380px] lg:min-h-[400px] rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] hover:border-[#ffeedd]/40 transition-all duration-300 group flex items-stretch" style={{ transform: "translateZ(0)" }}>
-              <img
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="eficiencia_energia.webp"
-                alt="Eficiencia y Calidad de Energía"
-                loading="lazy"
-              />
-              <div className="relative w-full p-3 md:p-5 bg-black/5 flex items-stretch justify-start">
-                <div className={glassCardClass}>
-                  <div>
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#ffeedd] to-[#fea186] rounded-xl flex items-center justify-center mb-3 md:mb-4 text-[#76331f] border border-white/50 shadow-sm">
-                      <span className="material-symbols-outlined text-[24px] md:text-[28px] icon-fill">insights</span>
+            <div id="energy-efficiency" className="relative rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:border-[#ffeedd]/30 transition-all duration-300 group flex flex-col bg-white/70 backdrop-blur-xs" style={{ transform: "translateZ(0)" }}>
+              <div className="w-full h-[200px] overflow-hidden relative">
+                <img
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  src="eficiencia_energia.webp"
+                  alt="Eficiencia y Calidad de Energía"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/[0.03]"></div>
+              </div>
+              <div className="flex-grow p-5 md:p-6 flex flex-col justify-between border-t border-white/30">
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#ffeedd] to-[#fea186] rounded-xl flex items-center justify-center text-[#76331f] border border-white/50 shadow-sm shrink-0">
+                      <span className="material-symbols-outlined text-[22px] icon-fill">insights</span>
                     </div>
-                    <h3 className="font-headline-sm text-headline-sm text-on-surface mb-1 font-bold">Eficiencia y Calidad de Energía</h3>
-                    <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-3">
-                      Auditorías de calidad eléctrica, perfiles de carga y optimización para cumplimiento del Código de Red y ahorro energético.
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {["Código de Red", "Perfiles de Carga", "Ahorro de Energía", "Calidad de Energía"].map((tag) => (
-                        <span key={tag} className="bg-white/80 text-[#76331f] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#ffeedd]/60 shadow-xs">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                    <h3 className="font-headline-sm text-[16px] md:text-[18px] text-on-surface font-bold leading-tight">Eficiencia y Calidad de Energía</h3>
                   </div>
+                  <p className="font-body-sm text-[12px] md:text-[13px] text-on-surface-variant leading-relaxed mb-4">
+                    Auditorías de calidad eléctrica, perfiles de carga y optimización para cumplimiento del Código de Red y ahorro energético.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mt-auto">
+                  {["Código de Red", "Perfiles de Carga", "Ahorro de Energía", "Calidad de Energía"].map((tag) => (
+                    <span key={tag} className="bg-white/80 text-[#76331f] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#ffeedd]/60 shadow-xs">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
+
             {/* Pillar 6: Capacitación y Cursos Técnicos */}
-            <div id="training" className="relative min-h-[250px] md:min-h-[380px] lg:min-h-[400px] rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] hover:border-[#e4e2dd]/40 transition-all duration-300 group flex items-stretch" style={{ transform: "translateZ(0)" }}>
-              <img
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="capacitacion_tecnica.webp"
-                alt="Capacitación y Cursos Técnicos"
-                loading="lazy"
-              />
-              <div className="relative w-full p-3 md:p-5 bg-black/5 flex items-stretch justify-start">
-                <div className={glassCardClass}>
-                  <div>
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#e4e2dd] to-[#c8c6c2] rounded-xl flex items-center justify-center mb-3 md:mb-4 text-[#31312e] border border-white/50 shadow-sm">
-                      <span className="material-symbols-outlined text-[24px] md:text-[28px] icon-fill">school</span>
+            <div id="training" className="relative rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:border-[#e4e2dd]/30 transition-all duration-300 group flex flex-col bg-white/70 backdrop-blur-xs" style={{ transform: "translateZ(0)" }}>
+              <div className="w-full h-[200px] overflow-hidden relative">
+                <img
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  src="capacitacion_tecnica.webp"
+                  alt="Capacitación y Cursos Técnicos"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/[0.03]"></div>
+              </div>
+              <div className="flex-grow p-5 md:p-6 flex flex-col justify-between border-t border-white/30">
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#e4e2dd] to-[#c8c6c2] rounded-xl flex items-center justify-center text-[#31312e] border border-white/50 shadow-sm shrink-0">
+                      <span className="material-symbols-outlined text-[22px] icon-fill">school</span>
                     </div>
-                    <h3 className="font-headline-sm text-headline-sm text-on-surface mb-1 font-bold">Capacitación y Cursos Técnicos</h3>
-                    <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-3">
-                      Cursos con certificación oficial ante la STPS y constancias de competencias laborales DC-3 para tu personal técnico.
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {["Cursos STPS", "Seguridad Eléctrica", "Constancias DC-3", "Capacitación Externa"].map((tag) => (
-                        <span key={tag} className="bg-white/80 text-[#31312e] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#e4e2dd]/60 shadow-xs">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                    <h3 className="font-headline-sm text-[16px] md:text-[18px] text-on-surface font-bold leading-tight">Capacitación y Cursos Técnicos</h3>
                   </div>
+                  <p className="font-body-sm text-[12px] md:text-[13px] text-on-surface-variant leading-relaxed mb-4">
+                    Cursos con certificación oficial ante la STPS y constancias de competencias laborales DC-3 para tu personal técnico.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mt-auto">
+                  {["Cursos STPS", "Seguridad Eléctrica", "Constancias DC-3", "Capacitación Externa"].map((tag) => (
+                    <span key={tag} className="bg-white/80 text-[#31312e] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#e4e2dd]/60 shadow-xs">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -356,13 +377,13 @@ export default function App() {
                 <span className="font-label-sm text-[10px] sm:text-label-sm uppercase tracking-wider font-bold">Acerca de Nosotros</span>
               </div>
               <h2 className="font-display font-bold text-lg sm:text-4xl md:text-5xl text-secondary leading-snug">
-                10 Años de Experiencia en el Sector.
+                Con amplia experiencia en el sector
               </h2>
               <p className="text-xs sm:text-body-md text-on-surface-variant leading-relaxed">
-                Fundada por los socios <strong className="text-secondary font-bold">Lisandro Cruzado Vázquez</strong> y <strong className="text-secondary font-bold">Roberto Daniel Reyes López</strong>, MITE está conformada por ingenieros reconocidos y altamente capacitados.
+                Fundada por los socios <strong className="text-secondary font-bold">Lisandro Cruzado Vázquez</strong> y <strong className="text-secondary font-bold">Roberto Daniel Reyes López</strong>, MITE está conformada por personal altamente capacitado.
               </p>
               <p className="text-xs sm:text-body-md text-on-surface-variant leading-relaxed font-semibold">
-                Llevamos una década realizando trabajos de precisión en cualquier área, asegurando la continuidad de tus operaciones.
+                Llevamos una amplia trayectoria haciendo trabajos de precisión en cualquier área, asegurando la continuidad de tus operaciones.
               </p>
               {/* Technical Certifications / Trust highlights */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 mt-2 border-t border-slate-200/60 pt-4 sm:pt-6">
@@ -372,7 +393,6 @@ export default function App() {
                   </div>
                   <div>
                     <h4 className="font-label-md text-[10px] sm:text-xs md:text-label-md font-bold text-secondary">Lisandro Cruzado V.</h4>
-                    <p className="text-[8px] sm:text-[10px] md:text-[11px] text-[#934a34] font-semibold">Socio Fundador / Ing. Mecánico</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 sm:gap-3 bg-white/30 backdrop-blur-md border border-white/40 p-2 sm:p-3 rounded-xl sm:rounded-2xl">
@@ -381,7 +401,6 @@ export default function App() {
                   </div>
                   <div>
                     <h4 className="font-label-md text-[10px] sm:text-xs md:text-label-md font-bold text-secondary">Roberto Daniel Reyes L.</h4>
-                    <p className="text-[8px] sm:text-[10px] md:text-[11px] text-[#934a34] font-semibold">Socio Fundador / Ing. Mecánico</p>
                   </div>
                 </div>
               </div>
