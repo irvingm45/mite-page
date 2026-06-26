@@ -1,14 +1,118 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Typewriter } from "@/components/ui/typewriter"
+import { motion, AnimatePresence } from "framer-motion"
+
+interface emailObj {
+  service: string;
+  scale: string;
+  name: string;
+  company: string;
+  email: string;
+  message: string;
+}
 
 export default function App() {
   const [selectedService, setSelectedService] = useState<string>("hvac")
   const [projectScale, setProjectScale] = useState<string>("medio")
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  // Variables del formulario
+  const [fullName, setFullName] = useState<string>("");
+  const [companyName, setCompanyName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [toast, setToast] = useState<{ type: "success" | "error"; message: string } | null>(null);
+
+  // Auto-dismiss toast after 5 seconds
+  useEffect(() => {
+    if (toast) {
+      const timer = setTimeout(() => setToast(null), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [toast]);
+
+  const constructEmail = (): emailObj => {
+    const serviceLabels: Record<string, string> = {
+      hvac: "HVAC / Aire Acondicionado",
+      electrical: "Instalación Eléctrica",
+      backups: "UPS y Redes",
+      infrastructure: "Obra Civil / Maquinaria",
+      "energy-efficiency": "Eficiencia y Calidad de Energía",
+      training: "Capacitación y Cursos Técnicos",
+      other: "Otro Servicio"
+    }
+
+    const scaleLabels: Record<string, string> = {
+      pequeno: "Comercial / PYME",
+      medio: "Corporativo / Educativo",
+      grande: "Industrial / Hospitalario",
+      otro: "Otro"
+    }
+
+    return {
+      service: serviceLabels[selectedService] || selectedService,
+      scale: scaleLabels[projectScale] || projectScale,
+      name: fullName,
+      company: companyName,
+      email: email,
+      message: message
+    }
+  }
+  // Mensaje de éxito al enviar el formulario
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY; // Reemplaza con tu clave de acceso de Web3Forms
+    if (!accessKey) {
+      console.error("Error: La clave de Web3Forms no está definida en las variables de entorno.");
+      return;
+    }
     e.preventDefault()
-    alert("¡Mensaje enviado con éxito! Nos contactaremos a la brevedad.")
+    setIsSubmitting(true);
+
+    // Construcción del objeto
+    const newEmail = constructEmail();
+    console.log(newEmail);
+
+    try {
+      // Envio del formulario a web3forms
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey, // Reemplaza con tu clave de acceso de Web3Forms
+          subject: "Nuevo correo desde MITE",
+          name: newEmail.name,
+          email: newEmail.email,
+          message: `Servicio: ${newEmail.service}\nEscala del proyecto: ${newEmail.scale}\nNombre: ${newEmail.name}\nEmpresa: ${newEmail.company}\nCorreo electrónico: ${newEmail.email}\nMensaje: ${newEmail.message}`,
+        }),
+      });
+      if (!response.ok) {
+        throw new Error(`Error en la solicitud: ${response.statusText}`);
+      }
+      else {
+        // Limpiar el formulario después de enviar
+        setFullName("");
+        setCompanyName("");
+        setEmail("");
+        setMessage("");
+
+        // Mostrar mensaje de éxito
+        setToast({
+          type: "success",
+          message: "¡Mensaje enviado con éxito! Nos contactaremos a la brevedad."
+        });
+      }
+    } catch (e) {
+      console.log(e);
+      setToast({
+        type: "error",
+        message: "Hubo un problema al enviar tu mensaje por correo. Por favor, platícanos tu idea por WhatsApp."
+      });
+    }
+
+    setIsSubmitting(false);
   }
 
   return (
@@ -77,7 +181,7 @@ export default function App() {
               className="w-full h-full object-cover filter brightness-[0.3] contrast-[1.05]"
               alt="Modern commercial office space with soft daylight"
               src="hero_background_C.webp"
-              fetchPriority="high"
+              {...{ fetchpriority: "high" }}
             />
             {/* Soft gradient bottom overlay to blend with the rest of the page */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#faf9f7] via-transparent to-black/30"></div>
@@ -605,7 +709,11 @@ export default function App() {
                     </span>
                     <input
                       required
+                      name="fullName"
                       type="text"
+                      // Para ver su cambio
+                      value={fullName}
+                      onChange={(e) => setFullName(e.target.value)}
                       placeholder="Nombre Completo"
                       className="w-full bg-transparent border-t-0 border-x-0 border-b border-slate-300/80 focus:border-[#934a34] focus:ring-0 pl-7 pr-2 py-2.5 font-body-md text-body-md text-secondary transition-all outline-none"
                     />
@@ -619,6 +727,10 @@ export default function App() {
                     <input
                       required
                       type="text"
+                      name="companyName"
+                      // Para guardar el nombre de la empresa
+                      value={companyName}
+                      onChange={(e) => setCompanyName(e.target.value)}
                       placeholder="Empresa / Razón Social"
                       className="w-full bg-transparent border-t-0 border-x-0 border-b border-slate-300/80 focus:border-[#934a34] focus:ring-0 pl-7 pr-2 py-2.5 font-body-md text-body-md text-secondary transition-all outline-none"
                     />
@@ -632,6 +744,10 @@ export default function App() {
                     <input
                       required
                       type="email"
+                      name="fullEmail"
+                      // Para guardar el correo de la empresa
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       placeholder="Correo Electrónico Corporativo"
                       className="w-full bg-transparent border-t-0 border-x-0 border-b border-slate-300/80 focus:border-[#934a34] focus:ring-0 pl-7 pr-2 py-2.5 font-body-md text-body-md text-secondary transition-all outline-none"
                     />
@@ -645,6 +761,10 @@ export default function App() {
                     <textarea
                       required
                       rows={3}
+                      name="message"
+                      // Para guardar el mensaje
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                       placeholder="Cuéntanos sobre tu necesidad o proyecto..."
                       className="w-full bg-transparent border-t-0 border-x-0 border-b border-slate-300/80 focus:border-[#934a34] focus:ring-0 pl-7 pr-2 py-2.5 font-body-md text-body-md text-secondary transition-all outline-none resize-none"
                     ></textarea>
@@ -655,9 +775,14 @@ export default function App() {
               {/* Submit Button */}
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-[#934a34] to-[#75331f] text-white shadow-[0_8px_20px_rgba(147,74,52,0.4)] border border-white/30 hover:shadow-[0_10px_25px_rgba(147,74,52,0.5)] hover:scale-[1.01] transition-all py-4 rounded-full font-label-md text-label-md flex items-center justify-center gap-2 font-bold"
               >
-                Enviar Solicitud
+                {isSubmitting ? (
+                  <span className="material-symbols-outlined text-lg animate-spin">autorenew</span>
+                ) : (
+                  "Enviar Solicitud"
+                )}
                 <span className="material-symbols-outlined text-lg">send</span>
               </button>
             </form>
@@ -807,6 +932,51 @@ export default function App() {
           <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.968C16.63 2.007 14.162.981 11.534.981 6.1 1.011 1.674 5.432 1.67 10.86c-.001 1.737.453 3.428 1.316 4.922L2.007 21.3l5.823-1.526-.183-.32zm10.741-6.196c-.3-.15-1.774-.875-2.046-.974-.272-.1-.471-.15-.669.15-.198.3-.767.974-.94 1.174-.173.2-.347.225-.647.075-.3-.15-1.269-.468-2.417-1.493-.893-.797-1.496-1.78-1.672-2.08-.175-.3-.019-.462.13-.611.135-.133.3-.349.45-.524.15-.175.2-.299.3-.499.1-.2.05-.375-.025-.524-.075-.15-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.299-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.774-.724 2.022-1.424.248-.699.248-1.299.173-1.424-.075-.125-.272-.199-.572-.349z"/>
         </svg>
       </a>
+
+      <AnimatePresence>
+        {toast && (
+          <motion.div
+            initial={{ opacity: 0, y: -50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className={`fixed top-24 right-6 z-[100] max-w-md bg-white/95 backdrop-blur-md border rounded-2xl p-4 shadow-[0_20px_50px_rgba(0,0,0,0.1)] flex items-start gap-3 border-l-4 ${
+              toast.type === "success"
+                ? "border-l-emerald-500 border-white/40"
+                : "border-l-rose-500 border-white/40"
+            }`}
+          >
+            {/* Icon */}
+            <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
+              toast.type === "success"
+                ? "bg-emerald-50 text-emerald-600"
+                : "bg-rose-50 text-rose-600"
+            }`}>
+              <span className="material-symbols-outlined text-[20px] font-bold">
+                {toast.type === "success" ? "check_circle" : "error"}
+              </span>
+            </div>
+
+            {/* Text */}
+            <div className="flex-grow pr-4">
+              <h4 className="font-bold text-slate-800 text-sm">
+                {toast.type === "success" ? "¡Éxito!" : "¡Hubo un error!"}
+              </h4>
+              <p className="text-slate-600 text-xs mt-0.5 leading-relaxed">
+                {toast.message}
+              </p>
+            </div>
+
+            {/* Close button */}
+            <button
+              onClick={() => setToast(null)}
+              className="text-slate-400 hover:text-slate-600 transition-colors"
+            >
+              <span className="material-symbols-outlined text-[18px]">close</span>
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }
