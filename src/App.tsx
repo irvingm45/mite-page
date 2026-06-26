@@ -484,30 +484,11 @@ export default function App() {
                 Con amplia experiencia en el sector
               </h2>
               <p className="text-xs sm:text-body-md text-on-surface-variant leading-relaxed">
-                Fundada por los socios <strong className="text-secondary font-bold">Lisandro Cruzado Vázquez</strong> y <strong className="text-secondary font-bold">Roberto Daniel Reyes López</strong>, MITE está conformada por personal altamente capacitado.
+                MITE es una organización con una amplia y comprobada trayectoria en el sector del mantenimiento industrial y comercial, brindando soluciones integrales de alta precisión.
               </p>
               <p className="text-xs sm:text-body-md text-on-surface-variant leading-relaxed font-semibold">
-                Llevamos una amplia trayectoria haciendo trabajos de precisión en cualquier área, asegurando la continuidad de tus operaciones.
+                Llevamos realizando trabajos especializados y de precisión en cualquier área, asegurando en todo momento la continuidad y seguridad de tus operaciones.
               </p>
-              {/* Technical Certifications / Trust highlights */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 mt-2 border-t border-slate-200/60 pt-4 sm:pt-6">
-                <div className="flex items-center gap-2 sm:gap-3 bg-white/30 backdrop-blur-md border border-white/40 p-2 sm:p-3 rounded-xl sm:rounded-2xl">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-[#934a34] to-[#75331f] text-white flex items-center justify-center font-bold text-xs sm:text-sm shrink-0 shadow-sm">
-                    LC
-                  </div>
-                  <div>
-                    <h4 className="font-label-md text-[10px] sm:text-xs md:text-label-md font-bold text-secondary">Lisandro Cruzado V.</h4>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 sm:gap-3 bg-white/30 backdrop-blur-md border border-white/40 p-2 sm:p-3 rounded-xl sm:rounded-2xl">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-[#203344] to-[#36485b] text-white flex items-center justify-center font-bold text-xs sm:text-sm shrink-0 shadow-sm">
-                    RR
-                  </div>
-                  <div>
-                    <h4 className="font-label-md text-[10px] sm:text-xs md:text-label-md font-bold text-secondary">Roberto Daniel Reyes L.</h4>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
