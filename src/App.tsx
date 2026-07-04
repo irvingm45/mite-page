@@ -319,7 +319,7 @@ export default function App() {
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-1.5 mt-auto">
-                  {["Alta, Media y Baja Tensión", "Subestaciones", "Tableros", "Redes de Tierra"].map((tag) => (
+                  {["Alta, Media y Baja Tensión", "Subestaciones", "Tableros Eléctricos", "Redes de Tierra"].map((tag) => (
                     <span key={tag} className="bg-white/80 text-[#091d2e] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#d1e4fb]/60 shadow-xs">
                       {tag}
                     </span>
@@ -899,7 +899,7 @@ export default function App() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/524421234567?text=Hola,%20me%20gustaría%20solicitar%20una%20cotización%20de%20mantenimiento%20para%20mi%20negocio."
+        href="https://wa.me/525571904860?text=Hola,%20me%20gustaría%20solicitar%20una%20cotización%20de%20mantenimiento%20para%20mi%20negocio."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-[#25d366] to-[#128c7e] text-white p-4 rounded-full shadow-lg hover:shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center group animate-float"
