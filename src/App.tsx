@@ -464,9 +464,9 @@ export default function App() {
 
         {/* Acerca de Nosotros */}
         <section id="about" className="py-xl px-margin-mobile md:px-margin-desktop bg-transparent max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-12 gap-6 md:gap-12 items-center">
+          <div className="grid grid-cols-12 gap-3 md:gap-12 items-center">
             {/* Left Column: Visual Image */}
-            <div className="col-span-4 sm:col-span-5 relative rounded-[2rem] overflow-hidden border border-white/30 shadow-lg" style={{ transform: "translateZ(0)" }}>
+            <div className="col-span-5 sm:col-span-5 md:col-span-4 relative rounded-[2rem] overflow-hidden border border-white/30 shadow-lg" style={{ transform: "translateZ(0)" }}>
               <img
                 className="w-full h-auto block"
                 src="logo.webp"
@@ -475,7 +475,7 @@ export default function App() {
               />
             </div>
             {/* Right Column: Copywriting & Founders */}
-            <div className="col-span-8 sm:col-span-7 flex flex-col gap-3 sm:gap-5 justify-center">
+            <div className="col-span-7 sm:col-span-7 md:col-span-8 flex flex-col gap-3 sm:gap-5 justify-center">
               <div className="inline-flex items-center gap-2 bg-[#d1e4fb] text-[#091d2e] border border-[#a5b8ce]/30 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full w-max shadow-sm">
                 <span className="material-symbols-outlined text-[14px] sm:text-[16px] icon-fill">groups</span>
                 <span className="font-label-sm text-[10px] sm:text-label-sm uppercase tracking-wider font-bold">Acerca de Nosotros</span>
