@@ -869,8 +869,8 @@ export default function App() {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="material-symbols-outlined text-[#ffdbd1] text-lg">phone</span>
-                  <a href="tel:+524421234567" className="hover:text-white transition-colors">
-                    +52 (442) 123 4567
+                  <a href="tel:+5522875999" className="hover:text-white transition-colors">
+                    +55 2287 5999
                   </a>
                 </li>
                 <li className="flex items-start gap-2">
