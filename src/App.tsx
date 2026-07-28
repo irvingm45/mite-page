@@ -863,8 +863,8 @@ export default function App() {
               <ul className="flex flex-col gap-3 text-xs md:text-sm text-white/60">
                 <li className="flex items-center gap-2">
                   <span className="material-symbols-outlined text-[#ffdbd1] text-lg">mail</span>
-                  <a href="mailto:contacto@mite.com.mx" className="hover:text-white transition-colors">
-                    contacto@mite.com.mx
+                  <a href="mailto:mtto.termelec@mitecase.com" className="hover:text-white transition-colors">
+                    mtto.termelec@mitecase.com
                   </a>
                 </li>
                 <li className="flex items-center gap-2">
