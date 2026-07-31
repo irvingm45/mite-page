@@ -267,7 +267,7 @@ export default function App() {
               <div className="w-full h-[200px] overflow-hidden relative">
                 <img
                   className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                  src="hvac_C.webp"
+                  src="hvac.webp"
                   alt="HVAC y Refrigeración"
                   loading="lazy"
                 />
@@ -366,7 +366,7 @@ export default function App() {
               <div className="w-full h-[200px] overflow-hidden relative">
                 <img
                   className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                  src="obra_civil_C.webp"
+                  src="edificio.webp"
                   alt="Maquinaria y Obra Civil"
                   loading="lazy"
                 />
