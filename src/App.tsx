@@ -378,14 +378,14 @@ export default function App() {
                     <div className="w-10 h-10 bg-gradient-to-br from-[#ffeedd] to-[#fea186] rounded-xl flex items-center justify-center text-[#76331f] border border-white/50 shadow-sm shrink-0">
                       <span className="material-symbols-outlined text-[22px] icon-fill">battery_charging_full</span>
                     </div>
-                    <h3 className="font-headline-sm text-[16px] md:text-[18px] text-on-surface font-bold leading-tight">Sistemas UPS y Redes</h3>
+                    <h3 className="font-headline-sm text-[16px] md:text-[18px] text-on-surface font-bold leading-tight">Servidores, redes y sistemas UPS</h3>
                   </div>
                   <p className="font-body-sm text-[12px] md:text-[13px] text-on-surface-variant leading-relaxed mb-4">
-                    Mantenimiento de sistemas UPS para el respaldo de energía ininterrumpida y soluciones integrales en cableado estructurado de redes.
+                    Venta, suministro, instalación y mantenimiento de sistemas UPS para el respaldo de energía ininterrumpida y soluciones integrales en cableado estructurado de redes.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-1.5 mt-auto">
-                  {["Respaldo Crítico", "Bancos de Baterías", "Cableado de Redes"].map((tag) => (
+                  {["Servidores", "Centros de distribución de información cibernética", "Respaldo Crítico", "Bancos de Baterías", "Cableado de Redes"].map((tag) => (
                     <span key={tag} className="bg-white/80 text-[#76331f] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#ffeedd]/60 shadow-xs">
                       {tag}
                     </span>
