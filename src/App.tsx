@@ -411,14 +411,14 @@ export default function App() {
                     <div className="w-10 h-10 bg-gradient-to-br from-[#e4e2dd] to-[#c8c6c2] rounded-xl flex items-center justify-center text-[#31312e] border border-white/50 shadow-sm shrink-0">
                       <span className="material-symbols-outlined text-[22px] icon-fill">construction</span>
                     </div>
-                    <h3 className="font-headline-sm text-[16px] md:text-[18px] text-on-surface font-bold leading-tight">Maquinaria y Obra Civil</h3>
+                    <h3 className="font-headline-sm text-[16px] md:text-[18px] text-on-surface font-bold leading-tight">Construcción, arquitectura y maquinaria</h3>
                   </div>
                   <p className="font-body-sm text-[12px] md:text-[13px] text-on-surface-variant leading-relaxed mb-4">
-                    Mantenimiento preventivo/correctivo de maquinaria industrial y el desarrollo de todo tipo de obra civil e infraestructura física.
+                    Construcción, planeación, modificaciones, adaptación y remodelación de todo tipo de obra civil y arquitectónico.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-1.5 mt-auto">
-                  {["Montaje Industrial", "Obra Civil", "Estructuras", "Pintura Epóxica"].map((tag) => (
+                  {["Obra Civil", "Estructuras", "Proyectos arquitectónicos"].map((tag) => (
                     <span key={tag} className="bg-white/80 text-[#31312e] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#e4e2dd]/60 shadow-xs">
                       {tag}
                     </span>
