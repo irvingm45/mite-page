@@ -328,7 +328,40 @@ export default function App() {
               </div>
             </div>
 
-            {/* Pillar 3: Backups & Networks */}
+            {/* Pillar 3: Eficiencia y Calidad de Energía */}
+            <div id="energy-efficiency" className="relative rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:border-[#ffeedd]/30 transition-all duration-300 group flex flex-col bg-white/70 backdrop-blur-xs" style={{ transform: "translateZ(0)" }}>
+              <div className="w-full h-[200px] overflow-hidden relative">
+                <img
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  src="eficiencia_energia.webp"
+                  alt="Eficiencia y Calidad de Energía"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/[0.03]"></div>
+              </div>
+              <div className="flex-grow p-5 md:p-6 flex flex-col justify-between border-t border-white/30">
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#ffeedd] to-[#fea186] rounded-xl flex items-center justify-center text-[#76331f] border border-white/50 shadow-sm shrink-0">
+                      <span className="material-symbols-outlined text-[22px] icon-fill">insights</span>
+                    </div>
+                    <h3 className="font-headline-sm text-[16px] md:text-[18px] text-on-surface font-bold leading-tight">Eficiencia y Calidad de Energía</h3>
+                  </div>
+                  <p className="font-body-sm text-[12px] md:text-[13px] text-on-surface-variant leading-relaxed mb-4">
+                    Auditorías de calidad eléctrica, perfiles de carga y optimización para cumplimiento del Código de Red y ahorro energético.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mt-auto">
+                  {["Código de Red", "Perfiles de Carga", "Ahorro de Energía", "Calidad de Energía"].map((tag) => (
+                    <span key={tag} className="bg-white/80 text-[#76331f] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#ffeedd]/60 shadow-xs">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Pillar 4: Backups & Networks */}
             <div id="backups" className="relative rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:border-[#ffeedd]/30 transition-all duration-300 group flex flex-col bg-white/70 backdrop-blur-xs" style={{ transform: "translateZ(0)" }}>
               <div className="w-full h-[200px] overflow-hidden relative">
                 <img
@@ -361,7 +394,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* Pillar 4: Infrastructure & Machinery */}
+            {/* Pillar 5: Infrastructure & Machinery */}
             <div id="infrastructure" className="relative rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:border-[#e4e2dd]/30 transition-all duration-300 group flex flex-col bg-white/70 backdrop-blur-xs" style={{ transform: "translateZ(0)" }}>
               <div className="w-full h-[200px] overflow-hidden relative">
                 <img
@@ -394,38 +427,6 @@ export default function App() {
               </div>
             </div>
 
-            {/* Pillar 5: Eficiencia y Calidad de Energía */}
-            <div id="energy-efficiency" className="relative rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:border-[#ffeedd]/30 transition-all duration-300 group flex flex-col bg-white/70 backdrop-blur-xs" style={{ transform: "translateZ(0)" }}>
-              <div className="w-full h-[200px] overflow-hidden relative">
-                <img
-                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                  src="eficiencia_energia.webp"
-                  alt="Eficiencia y Calidad de Energía"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-black/[0.03]"></div>
-              </div>
-              <div className="flex-grow p-5 md:p-6 flex flex-col justify-between border-t border-white/30">
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-[#ffeedd] to-[#fea186] rounded-xl flex items-center justify-center text-[#76331f] border border-white/50 shadow-sm shrink-0">
-                      <span className="material-symbols-outlined text-[22px] icon-fill">insights</span>
-                    </div>
-                    <h3 className="font-headline-sm text-[16px] md:text-[18px] text-on-surface font-bold leading-tight">Eficiencia y Calidad de Energía</h3>
-                  </div>
-                  <p className="font-body-sm text-[12px] md:text-[13px] text-on-surface-variant leading-relaxed mb-4">
-                    Auditorías de calidad eléctrica, perfiles de carga y optimización para cumplimiento del Código de Red y ahorro energético.
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-1.5 mt-auto">
-                  {["Código de Red", "Perfiles de Carga", "Ahorro de Energía", "Calidad de Energía"].map((tag) => (
-                    <span key={tag} className="bg-white/80 text-[#76331f] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#ffeedd]/60 shadow-xs">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
 
             {/* Pillar 6: Capacitación y Cursos Técnicos */}
             <div id="training" className="relative rounded-[2rem] overflow-hidden border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:border-[#e4e2dd]/30 transition-all duration-300 group flex flex-col bg-white/70 backdrop-blur-xs" style={{ transform: "translateZ(0)" }}>
