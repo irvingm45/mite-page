@@ -286,7 +286,7 @@ export default function App() {
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-1.5 mt-auto">
-                  {["Tableros de aire", "Manejadoras de aire", "Chillers", "Sistemas VRF", "Cámaras Frías", "Aire Acondicionado"].map((tag) => (
+                  {["Tableros de control", "Manejadoras de aire", "Chillers", "Sistemas VRF", "Cámaras Frías", "Aire Acondicionado"].map((tag) => (
                     <span key={tag} className="bg-white/80 text-[#783521] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#ffdbd1]/60 shadow-xs">
                       {tag}
                     </span>
@@ -312,7 +312,7 @@ export default function App() {
                     <div className="w-10 h-10 bg-gradient-to-br from-[#d1e4fb] to-[#a5b8ce] rounded-xl flex items-center justify-center text-[#091d2e] border border-white/50 shadow-sm shrink-0">
                       <span className="material-symbols-outlined text-[22px] icon-fill">bolt</span>
                     </div>
-                    <h3 className="font-headline-sm text-[16px] md:text-[18px] text-on-surface font-bold leading-tight">Instalaciones Eléctricas</h3>
+                    <h3 className="font-headline-sm text-[16px] md:text-[18px] text-on-surface font-bold leading-tight">Mantenimiento industrial, sistemas y equipos eléctrios</h3>
                   </div>
                   <p className="font-body-sm text-[12px] md:text-[13px] text-on-surface-variant leading-relaxed mb-4">
                     Ingeniería y mantenimiento industrial, preventivo y correctivo para equipos eléctricos, redes de baja, media y alta tensión, asegurando un suministro continuo.
