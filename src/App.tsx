@@ -282,11 +282,11 @@ export default function App() {
                     <h3 className="font-headline-sm text-[16px] md:text-[18px] text-on-surface font-bold leading-tight">HVAC y Refrigeración</h3>
                   </div>
                   <p className="font-body-sm text-[12px] md:text-[13px] text-on-surface-variant leading-relaxed mb-4">
-                    Proyectos y mantenimiento correctivo/preventivo de sistemas de aire acondicionado y refrigeración comercial o industrial.
+                    Venta, instalación y mantenimiento correctivo/preventivo de sistemas de aire acondicionado y refrigeración comercial o industrial.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-1.5 mt-auto">
-                  {["Chillers", "Sistemas VRF", "Cámaras Frías", "Aire Acondicionado"].map((tag) => (
+                  {["Tableros de aire", "Manejadoras de aire", "Chillers", "Sistemas VRF", "Cámaras Frías", "Aire Acondicionado"].map((tag) => (
                     <span key={tag} className="bg-white/80 text-[#783521] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#ffdbd1]/60 shadow-xs">
                       {tag}
                     </span>
@@ -315,11 +315,11 @@ export default function App() {
                     <h3 className="font-headline-sm text-[16px] md:text-[18px] text-on-surface font-bold leading-tight">Instalaciones Eléctricas</h3>
                   </div>
                   <p className="font-body-sm text-[12px] md:text-[13px] text-on-surface-variant leading-relaxed mb-4">
-                    Ingeniería y mantenimiento preventivo y correctivo para redes de baja, media y alta tensión, asegurando un suministro continuo.
+                    Ingeniería y mantenimiento industrial, preventivo y correctivo para equipos eléctricos, redes de baja, media y alta tensión, asegurando un suministro continuo.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-1.5 mt-auto">
-                  {["Alta, Media y Baja Tensión", "Subestaciones", "Tableros Eléctricos", "Redes de Tierra"].map((tag) => (
+                  {["Transformadores", "Generadores eléctricos", "Plantas de emergencia", "Monitores eléctricos", "Motores eléctricos y de combustión interna", "Subestaciones", "Tableros Eléctricos", "Redes de Tierra"].map((tag) => (
                     <span key={tag} className="bg-white/80 text-[#091d2e] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#d1e4fb]/60 shadow-xs">
                       {tag}
                     </span>
@@ -385,7 +385,7 @@ export default function App() {
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-1.5 mt-auto">
-                  {["Respaldo Crítico", "Bancos de Baterías", "Cableado de Redes", "Fibra Óptica"].map((tag) => (
+                  {["Respaldo Crítico", "Bancos de Baterías", "Cableado de Redes"].map((tag) => (
                     <span key={tag} className="bg-white/80 text-[#76331f] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#ffeedd]/60 shadow-xs">
                       {tag}
                     </span>
